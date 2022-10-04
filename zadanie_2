@@ -1,0 +1,5 @@
+lat(rok, rok_ur){
+  lat = rok - rok_ur
+  
+  return lat
+}
