@@ -1,0 +1,8 @@
+zostalo(dzis, dni){
+  zostalo = 0
+  i = dzis
+  
+  while(i < dni){
+    zostalo++
+  }
+}
