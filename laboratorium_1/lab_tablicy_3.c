@@ -13,7 +13,7 @@ int main(void) {
   printf("Wprowadz dlugosc tablicy: ");
   scanf("%d", &d);
   
-  printf("Wprowadz n: ")
+  printf("Wprowadz n: ");
   scanf("%d", &n);
   
   printf("Wprowadz a: ");
