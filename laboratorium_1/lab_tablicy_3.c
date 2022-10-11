@@ -10,8 +10,13 @@ int main(void) {
   int d, n;
   srand(time(NULL));
 
+  printf("Wprowadz dlugosc tablicy: ");
   scanf("%d", &d);
+  
+  printf("Wprowadz n: ")
   scanf("%d", &n);
+  
+  printf("Wprowadz a: ");
   scanf("%lf", &a);
 
   double array[d];
