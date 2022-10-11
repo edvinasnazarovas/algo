@@ -4,7 +4,7 @@
 //Obliczyc funkcja y = ax^2 znaczenia, gdy a ir x zmeniajan sie jednoczesnie: a z 1 krokiem 0.5, x - z 2 do 6 krokiem 2
 
 int main(void) {
-  double a, x, y;
+  double a, x;
 
   a = 1;
   x = 2;
