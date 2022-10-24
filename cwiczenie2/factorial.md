@@ -9,5 +9,5 @@ while(n--){
   if(n != 0) f *= n
 }
 
-print(f)
+return f
 ```
