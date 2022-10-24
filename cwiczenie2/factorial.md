@@ -28,3 +28,8 @@ return f
 2. Krok indukcii:
    - załóżmy, że niezmiennik i warunek zatrzymania są prawdziwe na końcu dowolnego kroku iteracji. Hipoteza indukcji $$P(n-1)$$
    - pokaż, że niezmiennik pozostaje prawdziwy po jednej iteracji $$(P(n))$$
+3. Udowodnic warunek końcowy: argumentuj, że niezmiennik i negacja warunka zatrzymania razem sfinalizujmy stan końcowy programu.
+
+### Przypadek podstawowy
+Udowdnimy że niezmiennik pętli jest prawdziwy po osiągnięciu pętli:
+1.
