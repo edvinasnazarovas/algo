@@ -1,7 +1,7 @@
 # Factorial
 ## Pseudokod i udowodnienie ze jest częściowo poprawny
 ### Analiza
-Dodatkowe zmienee do f = 1 do inicjacji pętli
+Dodatkowe zmienne do f = 1 do inicjacji pętli
 
 ### Pseudokod
 ```
