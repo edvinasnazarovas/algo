@@ -17,4 +17,4 @@ return f
 **Q** (warunek wstępny ): f = 1  
 **B** (warunek zatrzymania): while(n--)  
 **S** (ciało pętli ): f *= n  
-**R** (warunek końcowy): $$sum_{k=1}^n a_k b_k \right)^2 \leq$$
+**R** (warunek końcowy): $$sum_{k=1}^n$$
