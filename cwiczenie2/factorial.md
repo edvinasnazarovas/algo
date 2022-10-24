@@ -18,3 +18,6 @@ return f
 **B** (warunek zatrzymania): while(n--)  
 **S** (ciało pętli ): f *= n  
 **R** (warunek końcowy): $$\pi_{i=1}^{n}i$$
+
+### Wlasnosc Stopu
+-algorytm zatrzyma się, kiedykolwiek zajdzie $$i \leq 0$$
