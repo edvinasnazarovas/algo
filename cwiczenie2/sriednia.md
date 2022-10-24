@@ -1,6 +1,6 @@
 # Srednia
 ## Pseudokod i udowodnienie ze jest częściowo poprawny
-
+```
 define N 5
 
 a[N]
@@ -11,3 +11,4 @@ while(n--){
 }
 
 s = sum / N
+```
