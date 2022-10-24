@@ -20,4 +20,4 @@ return f
 **R** (warunek końcowy): $$\pi_{i=1}^{n}i$$
 
 ### Wlasnosc Stopu
--algorytm zatrzyma się, kiedykolwiek zajdzie $$n \leq 0$$
+- algorytm zatrzyma się, kiedykolwiek zajdzie $$n \leq 0$$
