@@ -13,3 +13,8 @@ while(n--){
 
 return f
 ```
+### Pętla
+**Q** (warunek wstępny ): f = 1
+**B** (warunek zatrzymania): while(n--)
+**S** (ciało pętli ): f *= n
+**R** (warunek końcowy): 
