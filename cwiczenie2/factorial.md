@@ -21,3 +21,9 @@ return f
 
 ### Wlasnosc Stopu
 - algorytm zatrzyma się, kiedykolwiek zajdzie $$n \leq 0$$
+- n jest stałą i skończoną liczbą naturalną - tak
+
+### Częściowa poprawność
+1. Przypadek podstawowy: udowodnic, że niezmiennik pętli jest prawdziwy po osiągnięciu pętli
+2. Krok indukcii:
+- załóżmy, że niezmiennik i warunek zatrzymania są prawdziwe na końcu dowolnego kroku iteracji (hipoteza indukcji 
