@@ -17,4 +17,4 @@ return f
 **Q** (warunek wstępny ): f = 1  
 **B** (warunek zatrzymania): while(n--)  
 **S** (ciało pętli ): f *= n  
-**R** (warunek końcowy): $$sum
+**R** (warunek końcowy): $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
