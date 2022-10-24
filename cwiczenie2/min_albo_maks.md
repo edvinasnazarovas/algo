@@ -1,6 +1,6 @@
 # Min albo maks
 ## Pseudokod i udowodnienie ze jest częściowo poprawny
-
+```
 define N 5
 
 n[N]
@@ -12,3 +12,4 @@ for (i = 0; i < N; i++){
   if(n[i] > maks) maks = n[i]
   if(n[i} < minimum) minimum = n[i]
 }
+```
