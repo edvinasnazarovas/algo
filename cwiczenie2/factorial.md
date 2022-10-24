@@ -26,4 +26,5 @@ return f
 ### Częściowa poprawność
 1. Przypadek podstawowy: udowodnic, że niezmiennik pętli jest prawdziwy po osiągnięciu pętli
 2. Krok indukcii:
-   - załóżmy, że niezmiennik i warunek zatrzymania są prawdziwe na końcu dowolnego kroku iteracji (hipoteza indukcji $$P(n-1)$$)
+   - załóżmy, że niezmiennik i warunek zatrzymania są prawdziwe na końcu dowolnego kroku iteracji. Hipoteza indukcji $$P(n-1)$$
+   - pokaż, że niezmiennik pozostaje prawdziwy po jednej iteracji $$(P(n))$$
