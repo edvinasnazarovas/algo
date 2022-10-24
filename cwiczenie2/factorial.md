@@ -17,4 +17,4 @@ return f
 **Q** (warunek wstępny ): f = 1  
 **B** (warunek zatrzymania): while(n--)  
 **S** (ciało pętli ): f *= n  
-**R** (warunek końcowy): $$\sum_{k=0}^{i-1} arr[k]$$
+**R** (warunek końcowy): $$\sum_{k}^{n} arr[k]$$
