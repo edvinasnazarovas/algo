@@ -17,4 +17,4 @@ return f
 **Q** (warunek wstępny ): f = 1  
 **B** (warunek zatrzymania): while(n--)  
 **S** (ciało pętli ): f *= n  
-**R** (warunek końcowy): $$\sum^{n}=$$
+**R** (warunek końcowy): $$\pi^{n}=$$
