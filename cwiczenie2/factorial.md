@@ -31,5 +31,9 @@ return f
 3. Udowodnic warunek końcowy: argumentuj, że niezmiennik i negacja warunka zatrzymania razem sfinalizujmy stan końcowy programu.
 
 ### Przypadek podstawowy
-Udowdnimy że niezmiennik pętli jest prawdziwy po osiągnięciu pętli:
-1.
+Udowdnimy że niezmiennik pętli jest prawdziwy po osiągnięciu pętli:  
+
+
+### Krok indukcji
+**Nieformalnie**  
+
