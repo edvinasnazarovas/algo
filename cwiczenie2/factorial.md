@@ -3,7 +3,7 @@
 ### Analiza
 Dodatkowe zmienee do f = 1 do inicjacji pętli
 
-###Pseudokod
+### Pseudokod
 ```
 f = 1
 
