@@ -1,6 +1,6 @@
 # Iloczyn i reszta
 ## Pseudokod i udowodnienie ze jest częściowo poprawny
-
+```
 while(dzielnik<liczba/2){
         r = liczba % dzielnik
         q = liczba / dzielnik
@@ -8,3 +8,4 @@ while(dzielnik<liczba/2){
         lista[1][dzielnik-2] = q
         dzielnik++
     }
+```
