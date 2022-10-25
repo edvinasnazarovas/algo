@@ -7,11 +7,7 @@
 - Ile elementow w tablice / Sprawdiz czy pusta tablica
 - Wyprowadzić elementy tablicy
 ```C
-  // Vladimir Poplavskij. Wykladowca
-    // Tablica
-    // 2022-10-24
-
-int find(int *arr);
+int find(int item, int *arr);
 
 void insert(int item, int pos, int *arr);
 
@@ -35,16 +31,19 @@ void main(void) {
   for(int i = 0; i < n; i++)
     scanf("%d", arr + i);
   
-  printf("%d\n", size(arr));
-  printTable(arr);
   // realizacja
+
   return;
 }
 
     // Funkcii
 
-int find(int *arr){
+int find(int item, int *arr){
+  int n = size(arr);
   
+  while(n--)
+    if(arr[n] == item)
+      return n;
 }
 
 void insert(int item, int pos, int *arr){
