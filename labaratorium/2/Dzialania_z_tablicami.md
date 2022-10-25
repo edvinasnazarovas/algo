@@ -7,10 +7,6 @@
 - Ile elementow w tablice / Sprawdiz czy pusta tablica
 - Wyprowadzić elementy tablicy
 ```C
-  // Vladimir Poplavskij. Wykladowca
-    // Tablica
-    // 2022-10-24
-
 int find(int *arr);
 
 void insert(int item, int pos, int *arr);
