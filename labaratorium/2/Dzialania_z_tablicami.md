@@ -1,6 +1,6 @@
 # Tablicy
 ## Dzialanie z tablicami
-- [Poszukiwanie elementu.
+- Poszukiwanie elementu.
 - Dodanie elementa. Na n pozicja tablicy.
 - Kasowanie elementu.
 - Znajdz maksymalny / minimalny.
