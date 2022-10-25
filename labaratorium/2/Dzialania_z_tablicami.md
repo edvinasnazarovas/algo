@@ -1,4 +1,4 @@
-```
+```C
   // Vladimir Poplavskij. Wykladowca
     // Tablica
     // 2022-10-24
