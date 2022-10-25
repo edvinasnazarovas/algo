@@ -85,3 +85,4 @@ void printTable(int *arr){
   }
 }
 ```
+https://replit.com/@EdvinasNazarova/Tablicy-2#main.c
