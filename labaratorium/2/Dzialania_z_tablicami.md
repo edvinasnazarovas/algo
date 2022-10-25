@@ -1,12 +1,16 @@
 # Tablicy
 ## Dzialanie z tablicami
-- Poszukiwanie elementu.
+- [Poszukiwanie elementu.
 - Dodanie elementa. Na n pozicja tablicy.
 - Kasowanie elementu.
 - Znajdz maksymalny / minimalny.
 - Ile elementow w tablice / Sprawdiz czy pusta tablica
 - Wyprowadzić elementy tablicy
 ```C
+  // Vladimir Poplavskij. Wykladowca
+    // Tablica
+    // 2022-10-24
+
 int find(int *arr);
 
 void insert(int item, int pos, int *arr);
@@ -22,9 +26,17 @@ int findMin(int *arr);
 void printTable(int *arr);
 
 #include <stdio.h>
+#include <stdlib.h>
 
 void main(void) {
-  int arr[100];
+  int n = 10;
+  int *arr = calloc(n, sizeof(int));
+
+  for(int i = 0; i < n; i++)
+    scanf("%d", arr + i);
+  
+  printf("%d\n", size(arr));
+  printTable(arr);
   // realizacja
   return;
 }
@@ -49,12 +61,14 @@ void rem(int pos, int *arr){
   }
 }
 
-/*
+
 int size(int *arr){
-  int length = (&arr)[1] - arr;
-  return length;
+  int length = 0;
+  while(arr[length] != 0)
+    length++;
+  return length - 1;
 }
-*/
+
 
 int findMax(int *arr){
   int max = arr[0];
