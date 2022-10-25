@@ -1,3 +1,11 @@
+# Tablicy
+## Dzialanie z tablicami
+- Poszukiwanie elementu.
+- Dodanie elementa. Na n pozicja tablicy.
+- Kasowanie elementu.
+- Znajdz maksymalny / minimalny.
+- Ile elementow w tablice / Sprawdiz czy pusta tablica
+- Wyprowadzić elementy tablicy
 ```C
   // Vladimir Poplavskij. Wykladowca
     // Tablica
