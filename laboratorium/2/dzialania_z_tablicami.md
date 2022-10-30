@@ -6,6 +6,8 @@
 - Znajdz maksymalny / minimalny.
 - Ile elementow w tablice / Sprawdiz czy pusta tablica
 - Wyprowadzić elementy tablicy
+
+## Program w C
 ```C
 int find(int item, int *arr);
 
