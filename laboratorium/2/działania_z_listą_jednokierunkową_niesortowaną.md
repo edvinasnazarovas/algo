@@ -11,6 +11,8 @@
 - Następny element listy po wskazanym pointerze
 - Poprzedni element listy po wskazanym pointerze
 - Wyczyść lista
+
+## Program w C 
 ```C
 #include <stdio.h>
 #include <stdlib.h>
