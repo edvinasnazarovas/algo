@@ -50,7 +50,7 @@ void push(struct Item** root, int data)
 int pop(struct Item** root)
 {
     if (isEmpty(*root))
-        return -9999;
+        return -32768;
     struct Item* temp = *root;
     *root = (*root)->next;
     int popped = temp->value;
