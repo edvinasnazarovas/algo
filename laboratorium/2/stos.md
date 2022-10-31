@@ -44,7 +44,7 @@ void push(struct Item** root, int data)
     struct Item* stackNode = newNode(data);
     stackNode->next = *root;
     *root = stackNode;
-    printf("%d pushed to stack\n", data);
+    printf("%d dodano do stosu\n", data);
 }
 
 int pop(struct Item** root)
