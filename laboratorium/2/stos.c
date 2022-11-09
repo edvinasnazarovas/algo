@@ -1,13 +1,3 @@
-# Stos
-## Działania z stosem
-- Wyśwetlień elementa ze góry stosu.
-- Wyberanie elementa ze stosa
-- Wyczyść
-- Dodaj element do góry stosu.
-- Sprawdż czy pusty
-
-### Program w C
-```C
 struct Item {
         float value;
         struct Item *next;
@@ -82,5 +72,3 @@ int makeNull(int *head){
   
       return;
     }
-```
-https://replit.com/@EdvinasNazarova/Stos#main.c
