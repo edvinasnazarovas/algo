@@ -1,14 +1,3 @@
-# Tablicy
-## Dzialanie z tablicami
-- Poszukiwanie elementu.
-- Dodanie elementa. Na n pozicja tablicy.
-- Kasowanie elementu.
-- Znajdz maksymalny / minimalny.
-- Ile elementow w tablice / Sprawdiz czy pusta tablica
-- Wyprowadzić elementy tablicy
-
-## Program w C
-```C
 int find(int item, int *arr);
 
 void insert(int item, int pos, int *arr);
@@ -99,5 +88,3 @@ void printTable(int *arr){
     printf("%d %d\n", n, arr[n]);
   }
 }
-```
-https://replit.com/@EdvinasNazarova/Tablicy-2#main.c
