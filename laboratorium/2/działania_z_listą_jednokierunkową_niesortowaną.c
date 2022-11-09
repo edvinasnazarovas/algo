@@ -1,19 +1,3 @@
-# Działania z listą jednokierunkową niesortowaną
-- Poszukiwanie elementu.
-- Znachodzenie pointera o wskazanej wartości
-- Zwraca element listy zza wskazany pointerem
-- Dodanie elementa.
-- Kasowanie element za wskazanym pointerem
-- Znajdź maksymalny / minimalny element listy
-- Wyprowadzić lista elementów
-- Ile elementów w liście
-- Sprawdź czy pusta lista
-- Następny element listy po wskazanym pointerze
-- Poprzedni element listy po wskazanym pointerze
-- Wyczyść lista
-
-## Program w C 
-```C
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -236,6 +220,3 @@ void main(void) {
 
       return;
     }
-```
-
-https://replit.com/@EdvinasNazarova/Dzialania-z-lista-jednokierunkowa-niesortowana#main.c
