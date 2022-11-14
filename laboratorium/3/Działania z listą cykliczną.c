@@ -62,7 +62,7 @@ int main(void) {
   second->prev = head;
 
   third->value = 3;
-  third->next = head;
+  third->next = NULL;
   third->prev = second;
 
   insert(third, 5, head);
@@ -77,7 +77,7 @@ int main(void) {
 
   printf("Retrieve: %f\n", retrieve(p, head));
 
-  removeItem(&head, p);
+  struct Item *pointer1 = p;
 
   printf("Max element is: %f\n", findMax(&head));
 
@@ -93,7 +93,11 @@ int main(void) {
 
   printf("Prev: %f\n", prev(p2, head));
 
+  removeItem(&head, p);
+
+  printf("\n\n-------Print List--------\n");
   printList(&head);
+  printf("--------------------\n\n");
 
   return 0;
 }
