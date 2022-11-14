@@ -1,4 +1,4 @@
-# Pseudokody
+# Pseudokody :computer:
 
 ## Działania z kolejką
 
