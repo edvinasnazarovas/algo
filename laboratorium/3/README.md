@@ -1,4 +1,4 @@
-# Pseudokody :computer:
+# Pseudokody 🗒️
 
 <br/><br/>
 
