@@ -1,6 +1,6 @@
 # Pseudokody
 
-## [Działania z kolejką](labaratorium/3/README.md)
+## Działania z kolejką
 
 ### insert(item, struct end)
 ```
