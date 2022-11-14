@@ -96,6 +96,17 @@ int main(void) {
 }
 
 // Funkcii
+
+/*Pseudocode
+  find(value, struct head pointer) {
+    declare and set current pointer to head
+    while(current != null) do
+      if(current value == value)
+        return 1
+      set current to current next
+    end
+  }
+*/
 int find(float value, struct Item *head) {
   struct Item *current = head;
   while (current != NULL) {
@@ -105,6 +116,16 @@ int find(float value, struct Item *head) {
   }
   return 0;
 }
+
+/*Pseudocode
+  locate(value, struct head pointer) {
+    while(head != null) do
+      if(head value == value)
+        return head
+      set head to head next
+    end
+  }
+*/
 
 void *locate(float value, struct Item *head) {
 
@@ -116,6 +137,16 @@ void *locate(float value, struct Item *head) {
   return 0;
 }
 
+/*Pseudocode
+  retrieve(pointer, struct head pointer) {
+    while(head != null) do
+      if(head == pointer)
+        return head value
+      set head to head next
+    end
+  }
+*/
+
 float retrieve(void *pointer, struct Item *head) {
   while (head != NULL) {
     if (head == pointer)
@@ -124,6 +155,21 @@ float retrieve(void *pointer, struct Item *head) {
   }
   return 0;
 }
+
+/*Pseudocode
+  insert(struct head pointer, item) {
+    if(head == null)
+      end
+    allocate new_node
+    set new_node value to item
+    set new_node next to head next
+    set head next to new_node
+    set new_node prev to head
+    if(new_node prev != null)
+      set new_node next prev to new_node
+    end
+  }
+*/
 
 void insert(struct Item *head, int item) {
   if (head == NULL) {
@@ -145,6 +191,15 @@ void insert(struct Item *head, int item) {
     new_node->next->prev = new_node;
 }
 
+/*Pseudocode
+  printList(struct head pointer) {
+    while(head != null) do
+      print head value
+      set head to next node
+    end
+  }
+*/
+
 int printList(struct Item *head) {
   while (head != NULL) {
     printf("%f\n", head->value);
@@ -152,6 +207,24 @@ int printList(struct Item *head) {
   }
   return 0;
 }
+
+/*Pseudocode
+  removeItem(struct head, pointer) {
+    declare and set temp pointer to head and prev pointer
+    if(temp != null and temp == pointer)
+      set head pointer to temp next
+      free temp
+      end
+    while(temp != null and temp != pointer) do
+      set prev to temp
+      set temp to temp next
+    if(temp == null)
+      end
+    set prev next to temp next
+    free temp
+    end
+  }
+*/
 
 void removeItem(struct Item **head, void *pointer) {
   struct Item *temp = *head, *prev;
@@ -175,6 +248,18 @@ void removeItem(struct Item **head, void *pointer) {
   free(temp);
 }
 
+/*Pseudocode
+  findMax(struct head) {
+    declare max pointer and temp pointer
+    set temp to max to head pointer
+    while(temp != null) do
+      if(temp value > max value)
+        set max to temp
+      set temp to temp next
+    return max value
+  }
+*/
+
 float findMax(struct Item **head) {
   struct Item *max, *temp;
 
@@ -188,6 +273,18 @@ float findMax(struct Item **head) {
   }
   return max->value;
 }
+
+/*Pseudocode
+  findMin(struct head) {
+    declare struct min pointer and temp pointer
+    set temp to min to head pointer
+    while(temp != null) do
+      if(temp value < min value)
+        set min to temp
+      set temp to temp next
+    return min value
+  }
+*/
 
 float findMin(struct Item **head) {
   struct Item *min, *temp;
@@ -203,6 +300,17 @@ float findMin(struct Item **head) {
   return min->value;
 }
 
+/*Pseudocode
+  size(struct head pointer) {
+    declare and set current pointer to head
+    declare and set i to 0
+    while(current != null) do
+      i++
+      set current to current next
+    return i
+  }
+*/
+
 int size(struct Item *head) {
   struct Item *current = head;
   int i = 0;
@@ -213,11 +321,27 @@ int size(struct Item *head) {
   return i;
 }
 
+/*Pseudocode
+  isEmpty(struct head pointer) {
+    if(head == null)
+      return 1
+    return 0
+  }
+*/
+
 int isEmpty(struct Item *head) {
-  if (head == NULL)
-    return 1;
-  return 0;
+  return head == NULL;
 }
+
+/*Pseudocode
+  next(item pointer, struct head pointer) {
+    while(head != null) do
+      if(head == null)
+        return head next value
+      set head to head next
+    end
+  }
+*/
 
 float next(void *item, struct Item *head) {
   while (head != NULL) {
@@ -228,6 +352,16 @@ float next(void *item, struct Item *head) {
   return 0;
 }
 
+/*Pseudocode
+  prev(item pointer, struct head pointer) {
+    while(head != null) do
+      if(head == item)
+        return head prev value
+      set head to head next
+    end
+  }
+*/
+
 float prev(void *item, struct Item *head) {
   while (head != NULL) {
     if (head == item)
@@ -236,6 +370,17 @@ float prev(void *item, struct Item *head) {
   }
   return 0;
 }
+
+/*Pseudocode
+  makeNull(struct head pointer) {
+    declare struct temp pointer
+    while(head != null) do
+      set temp to head
+      set head to head next
+      free temp
+    end
+  }
+*/
 
 void makeNull(struct Item *head) {
   struct Item *temp;
