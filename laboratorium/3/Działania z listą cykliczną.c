@@ -88,6 +88,8 @@ int main(void) {
   printf("Is list empty: %s\n", isEmpty(head) ? "empty" : "not empty");
 
   void *p2 = locate(3, head);
+  
+  /* BUG: Next czy Prev na wytarty element zamraza program. Nie wiem jak naprawic. */
 
   printf("Next: %f\n", next(p2, head));
 
