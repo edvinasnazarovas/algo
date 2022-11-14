@@ -42,6 +42,16 @@ void main(void) {
 }
 
 // Funkcii
+
+/*Pseudocode
+  newNode(data){
+    allocate stackNode
+    set stackNode value to data
+    set stackNode next to null
+    return stackNode
+  }
+*/
+
 struct Item *newNode(int data) {
   struct Item *stackNode = (struct Item *)malloc(sizeof(struct Item));
   stackNode->value = data;
@@ -49,7 +59,23 @@ struct Item *newNode(int data) {
   return stackNode;
 }
 
+/*Pseudocode
+  isEmpty(struct root pointer) {
+    return !root
+  }
+*/
+
 int isEmpty(struct Item *root) { return !root; }
+
+/*Pseudocode
+  push(struct root, data) {
+    set stackNode to newNode(data)
+    set stackNode next to root pointer
+    set root pointer to stackNode
+    print data
+    end
+  }
+*/
 
 void push(struct Item **root, int data) {
   struct Item *stackNode = newNode(data);
@@ -57,6 +83,18 @@ void push(struct Item **root, int data) {
   *root = stackNode;
   printf("%d pushed to stack\n", data);
 }
+
+/*Pseudocode
+  pop(struct root) {
+    if(isEmpty(root pointer))
+      return INT_MIN
+    set temp pointer to root pointer
+    set root pointer to (*root) next
+    set popped to temp value
+    free temp
+    return popped
+  }
+*/
 
 int pop(struct Item **root) {
   if (isEmpty(*root))
@@ -68,6 +106,14 @@ int pop(struct Item **root) {
 
   return popped;
 }
+
+/*Pseudocode
+  peek(root pointer) {
+    if(isEmpty(root))
+      return INT_MIN
+    return root value
+  }
+*/
 
 int peek(struct Item *root) {
   if (isEmpty(root))
