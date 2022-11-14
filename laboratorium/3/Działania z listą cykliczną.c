@@ -8,6 +8,10 @@ struct Item {
   int visited;
 };
 
+struct counter { 
+  struct Item *item;
+};
+
 int find(float value, struct Item *head);
 
 void clearVisits(struct Item **head);
@@ -36,8 +40,11 @@ float retrieve(void *pointer, struct Item *head);
 
 void removeItem(struct Item **head, void *pointer);
 
+
 int main(void) {
   // realizacja
+  struct counter count[9999];
+  
   struct Item *head = NULL;
   struct Item *second = NULL;
   struct Item *third = NULL;
@@ -60,77 +67,86 @@ int main(void) {
 
   insert(third, 5, head);
 
+  printf("\n\n-------Print List--------\n");
+  printList(&head);
+  printf("--------------------\n\n");
+
+  printf("find: %s\n", find(5, head) ? "found" : "not found");
+
+  void *p = locate(5, head);
+
+  printf("Retrieve: %f\n", retrieve(p, head));
+
+  removeItem(&head, p);
+
+  printf("Max element is: %f\n", findMax(&head));
+
+  printf("Min element is: %f\n", findMin(&head));
+
+  printf("Size of list is: %d\n", size(head));
+
+  printf("Is list empty: %s\n", isEmpty(head) ? "empty" : "not empty");
+
+  void *p2 = locate(3, head);
+
+  printf("Next: %f\n", next(p2, head));
+
+  printf("Prev: %f\n", prev(p2, head));
+
   printList(&head);
 
-  // printf("Element found: %s\n", find(4, head) ? "found" : "not found");
-
-  clearVisits(&head);
-
-  void *p = locate(3, head);
-
-  printf("\n%p\n", p);
-
-  // insert(p, 4);
-  // insert(p, 9);
-
-  // printf("Pointer is: %p\n", p);
-
-  // printf("Pointer element is: %f\n", retrieve(p, head));
-
-  // removeItem(&head, p);
-
-  // printf("Max element is: %f\n", findMax(&head));
-
-  // printf("Min element is: %f\n", findMin(&head));
-
-  /// printf("\nList\n");
-
-  // printList(head);
-
-  // printf("\nSize of list is: %d\n", size(head));
-
-  // printf("Is list empty: %s\n", isEmpty(head) ? "empty" : "not empty");
-
-  // void *p2 = locate(2, head);
-
-  // printf("Element next to the specified pointer is: %f\n", next(p2, head));
-
-  /*
-  Nie dziala dla elemetow dodanych przez funkcje insert
-  printf("Element previous to the specified pointer is: %f\n", prev(p2, head));
-  */
-
   return 0;
+}
+
+void clearVisits(struct Item **head){
+  struct Item *temp = *head;
+
+  while(temp != NULL && temp->visited == 1) {
+    temp->visited = 0;
+    temp = temp->next;
+    }
 }
 
 // Funkcii
 int find(float value, struct Item *head) {
   struct Item *current = head;
-  while (current != NULL) {
-    if (current->value == value)
+  while (current != NULL && current->visited != 1) {
+    current->visited = 1;
+    if (current->value == value){
+      clearVisits(&head);
       return 1;
+      }
     current = current->next;
   }
+  clearVisits(&head);
   return 0;
 }
 
 void *locate(float value, struct Item *head) {
 
   while (head != NULL && head->visited != 1) {
-    printf(".\n");
-    if (head->value == value)
+    head->visited = 1;
+    if (head->value == value){
+      clearVisits(&head);
       return head;
+    }
     head = head->next;
   }
+  clearVisits(&head);
   return 0;
 }
 
 float retrieve(void *pointer, struct Item *head) {
-  while (head != NULL) {
-    if (head == pointer)
+  clearVisits(&head);
+  while (head != NULL && head->visited != 1) {
+    head->visited = 1;
+    if (head == pointer){
+      clearVisits(&head);
       return head->value;
+    }
     head = head->next;
   }
+  clearVisits(&head);
   return 0;
 }
 
@@ -158,47 +174,38 @@ void insert(struct Item *item, int value, struct Item *head) {
 
 int printList(struct Item **head) {
   struct Item *temp = *head;
-  while (temp != NULL) {
-    if (temp->visited == 1) {
-      printf("Cycle restarts at: %f\n", temp->value);
-      return 0;
-    }
+  while (temp != NULL && temp->visited != 1) {
     printf("%f\n", temp->value);
     temp->visited = 1;
     temp = temp->next;
   }
+  clearVisits(head);
   return 0;
-}
-
-void clearVisits(struct Item **head) {
-  struct Item *temp = *head;
-  temp->visited = 0;
-  temp = temp->next;
-
-  while (temp != NULL && temp != *head) {
-    temp->visited = 0;
-    printf("visited: %d\n", temp->visited);
-  }
 }
 
 void removeItem(struct Item **head, void *pointer) {
   struct Item *temp = *head, *prev;
-
+  clearVisits(head);
   if (temp != NULL && temp == pointer) {
     *head = temp->next;
     free(temp);
     return;
   }
 
-  while (temp != NULL && temp != pointer) {
+  while (temp != NULL && temp != pointer && temp->visited != 1) {
+    temp->visited = 1;
     prev = temp;
     temp = temp->next;
   }
 
-  if (temp == NULL)
+  if (temp == NULL){
+    clearVisits(head);
     return;
+  }
 
   prev->next = temp->next;
+
+  clearVisits(head);
 
   free(temp);
 }
@@ -208,12 +215,16 @@ float findMax(struct Item **head) {
 
   temp = max = *head;
 
-  while (temp != NULL) {
+  clearVisits(head);
+
+  while (temp != NULL && temp->visited != 1) {
     if (temp->value > max->value)
       max = temp;
-
+    
+    temp->visited = 1;
     temp = temp->next;
   }
+  clearVisits(head);
   return max->value;
 }
 
@@ -222,22 +233,28 @@ float findMin(struct Item **head) {
 
   temp = min = *head;
 
-  while (temp != NULL) {
+  clearVisits(head);
+
+  while (temp != NULL && temp->visited != 1) {
     if (temp->value < min->value)
       min = temp;
 
+    temp->visited = 1;
     temp = temp->next;
   }
+  clearVisits(head);
   return min->value;
 }
 
 int size(struct Item *head) {
   struct Item *current = head;
   int i = 0;
-  while (current != NULL) {
+  while (current != NULL && current->visited != 1) {
     i++;
+    current->visited = 1;
     current = current->next;
   }
+  clearVisits(&head);
   return i;
 }
 
@@ -248,18 +265,25 @@ int isEmpty(struct Item *head) {
 }
 
 float next(void *item, struct Item *head) {
-  while (head != NULL) {
-    if (head == item)
+  clearVisits(&head);
+  while (head != NULL && head->visited != 1) {
+    if (head == item){
+      clearVisits(&head);
       return head->next->value;
+      }
     head = head->next;
   }
+  clearVisits(&head);
   return 0;
 }
 
 float prev(void *item, struct Item *head) {
-  while (head != NULL) {
-    if (head == item)
+  clearVisits(&head);
+  while (head != NULL && head->visited != 1) {
+    if (head == item){
+      clearVisits(&head);
       return head->prev->value;
+      }
     head = head->next;
   }
   return 0;
