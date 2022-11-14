@@ -1,3 +1,5 @@
+# Pseudokody
+
 ## Działania z kolejką
 
 ### insert(item, struct end)
