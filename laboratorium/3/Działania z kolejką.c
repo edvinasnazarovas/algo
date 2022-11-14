@@ -45,7 +45,21 @@ void main(void) {
 }
 
 // Funkcii
-
+/*Pseudocode
+  insert(item, struct end){
+    allocate new_node
+    declare struct last pointer and set to end pointer
+    set new_node value to item
+    set new_node next to null
+    if(end pointer == null)
+      set end pointer to new_node
+      end
+    while(last next != null) do
+      set last to last next
+    set last next to new_node
+    end
+  }
+*/
 void insert(float item, struct Item **end) {
 
   struct Item *new_node = (struct Item *)malloc(sizeof(struct Item));
@@ -68,6 +82,24 @@ void insert(float item, struct Item **end) {
   return;
 }
 
+/*Pseudocode
+  removeItem(pos, struct head) {
+    declare struct temp pointer and set to head pointer and prev pointer
+    if(temp != null and pos == 0)
+      set head pointer to temp next
+      free temp
+      end
+    while(temp != null and pos--) do
+      set prev to temp
+      set temp to temp next
+    if(temp == null)
+      end
+    set prev next to temp next
+    free temp
+    end
+  }
+*/
+
 void removeItem(int pos, struct Item **head) {
   struct Item *temp = *head, *prev;
 
@@ -89,6 +121,15 @@ void removeItem(int pos, struct Item **head) {
 
   free(temp);
 }
+
+/*Pseudocode
+  printList(struct head pointer) {
+    while(head != null) do
+      print head value
+      set head to head next
+    end
+  }
+*/
 
 int printList(struct Item *head) {
   while (head != NULL) {
