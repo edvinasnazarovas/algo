@@ -2,6 +2,8 @@
 
 ## [Działania z kolejką](/Działania z kolejką.c)
 
+[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+
 ### insert(item, struct end)
 ```
 allocate new_node
