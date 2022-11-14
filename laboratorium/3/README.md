@@ -218,7 +218,7 @@ declare struct temp pointer
   end
 ```
 
-# Działania z listą dwóchkierunkową niesortowaną
+## Działania z listą dwóchkierunkową niesortowaną
 ### find(value, struct head pointer)
 ```
 declare and set current pointer to head
