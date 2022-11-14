@@ -1,5 +1,7 @@
 # Pseudokody :computer:
 
+<br/><br/>
+
 ## Działania z kolejką
 
 ### insert(item, struct end)
@@ -41,6 +43,8 @@ while(head != null) do
       set head to head next
 end
 ```
+
+<br/><br/>
 
 # Działania z listą cykliczną
 
@@ -219,6 +223,8 @@ declare struct temp pointer
       free temp
   end
 ```
+
+<br/><br/>
 
 ## Działania z listą dwóchkierunkową niesortowaną
 ### find(value, struct head pointer)
