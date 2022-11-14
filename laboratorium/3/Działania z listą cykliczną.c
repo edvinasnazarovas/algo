@@ -8,10 +8,6 @@ struct Item {
   int visited;
 };
 
-struct counter { 
-  struct Item *item;
-};
-
 int find(float value, struct Item *head);
 
 void clearVisits(struct Item **head);
@@ -43,7 +39,6 @@ void removeItem(struct Item **head, void *pointer);
 
 int main(void) {
   // realizacja
-  struct counter count[9999];
   
   struct Item *head = NULL;
   struct Item *second = NULL;
