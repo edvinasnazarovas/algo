@@ -1,74 +1,122 @@
 struct Item {
-        float value;
-        struct Item *next;
-    };
+  int value;
+  struct Item *next;
+};
 
-    /*void top(float value, Item *s)
+/*void top(float value, Item *s)
 
-    void makeNull(Item *s)
+void makeNull(Item *s)
 
-    void pop(Item *s)
+void pop(Item *s)
 
-    void push(float value, Item *s)
+void push(float value, Item *s)
 
-    void isEmpty(Item *s)*/
+void isEmpty(Item *s)*/
 
-    #include <stdio.h>
+#include <limits.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-  struct Item* newNode(float value){
-    struct Item* stackNode = 
-      (struct Item*)
-      malloc(sizeof(struct Item));
-    stackNode->value = value;
-    stackNode->next = NULL;
-    return stackNode;
+struct Item *newNode(int data);
+
+int isEmpty(struct Item *root);
+
+void push(struct Item **root, int data);
+
+int pop(struct Item **root);
+
+int peek(struct Item *root);
+
+void main(void) {
+  struct Item *root = NULL;
+
+  push(&root, 10);
+  push(&root, 20);
+  push(&root, 30);
+
+  printf("%d popped from stack\n", pop(&root));
+
+  printf("Top element is %d\n", peek(root));
+
+  return;
+}
+
+// Funkcii
+
+/*Pseudocode
+  newNode(data){
+    allocate stackNode
+    set stackNode value to data
+    set stackNode next to null
+    return stackNode
   }
+*/
 
-int isEmpty(struct Item* root)
-{
-    return !root;
+struct Item *newNode(int data) {
+  struct Item *stackNode = (struct Item *)malloc(sizeof(struct Item));
+  stackNode->value = data;
+  stackNode->next = NULL;
+  return stackNode;
 }
 
-void push(struct Item** root, int data)
-{
-    struct Item* stackNode = newNode(data);
-    stackNode->next = *root;
-    *root = stackNode;
-    printf("%d dodano do stosu\n", data);
+/*Pseudocode
+  isEmpty(struct root pointer) {
+    return !root
+  }
+*/
+
+int isEmpty(struct Item *root) { return !root; }
+
+/*Pseudocode
+  push(struct root, data) {
+    set stackNode to newNode(data)
+    set stackNode next to root pointer
+    set root pointer to stackNode
+    print data
+    end
+  }
+*/
+
+void push(struct Item **root, int data) {
+  struct Item *stackNode = newNode(data);
+  stackNode->next = *root;
+  *root = stackNode;
+  printf("%d pushed to stack\n", data);
 }
 
-int pop(struct Item** root)
-{
-    if (isEmpty(*root))
-        return -32768;
-    struct Item* temp = *root;
-    *root = (*root)->next;
-    int popped = temp->value;
-    free(temp);
-  
-    return popped;
+/*Pseudocode
+  pop(struct root) {
+    if(isEmpty(root pointer))
+      return INT_MIN
+    set temp pointer to root pointer
+    set root pointer to (*root) next
+    set popped to temp value
+    free temp
+    return popped
+  }
+*/
+
+int pop(struct Item **root) {
+  if (isEmpty(*root))
+    return INT_MIN;
+  struct Item *temp = *root;
+  *root = (*root)->next;
+  int popped = temp->value;
+  free(temp);
+
+  return popped;
 }
 
-int makeNull(int *head){
-  struct Item* current = *head;
-   struct Item* next;
+/*Pseudocode
+  peek(root pointer) {
+    if(isEmpty(root))
+      return INT_MIN
+    return root value
+  }
+*/
 
-  while (current != NULL)
-   {
-       next = current->next;
-       free(current);
-       current = next;
-   }
-  *head = NULL;
-
+int peek(struct Item *root) {
+  if (isEmpty(root))
+    return INT_MIN;
+  return root->value;
 }
-
-
-
-    void main(void) {
-        // realizacja
-      struct Item* root = NULL;
-  
-  
-      return;
-    }
