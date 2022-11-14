@@ -1,8 +1,6 @@
 # Pseudokody
 
-## [Działania z kolejką](/Działania z kolejką.c)
-
-[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+## [Działania z kolejką](3/Działania z kolejką.c)
 
 ### insert(item, struct end)
 ```
