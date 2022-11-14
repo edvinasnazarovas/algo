@@ -88,8 +88,6 @@ int main(void) {
   printf("Is list empty: %s\n", isEmpty(head) ? "empty" : "not empty");
 
   void *p2 = locate(3, head);
-  
-  /* BUG: Next czy Prev na wytarty element zamraza program. Nie wiem jak naprawic. */
 
   printf("Next: %f\n", next(p2, head));
 
@@ -104,6 +102,18 @@ int main(void) {
   return 0;
 }
 
+//Funkcii
+
+/* Pseudocode
+  clearVisits(structure head){
+    set structure temp pointer to head pointer
+  
+    while(temp != null and temp->visited == 1) do
+      set visited member in temp to 0
+      set temp to the next node
+  end
+  }
+  */
 void clearVisits(struct Item **head){
   struct Item *temp = *head;
 
@@ -111,9 +121,25 @@ void clearVisits(struct Item **head){
     temp->visited = 0;
     temp = temp->next;
     }
+  return;
 }
+/*Pseudocode
+  find(value, structure head){
+    set current pointer to head
 
-// Funkcii
+    while(current != null and current->visited != 1) do
+      set visited member in current to 1
+
+      if(value member in current == value)
+        clear all visits in nodes
+        return 1
+
+      set current to the next node
+  clear all visits in nodes
+  end
+  }
+*/
+    
 int find(float value, struct Item *head) {
   struct Item *current = head;
   while (current != NULL && current->visited != 1) {
@@ -127,6 +153,21 @@ int find(float value, struct Item *head) {
   clearVisits(&head);
   return 0;
 }
+
+/*Pseudocode
+  locate(value, structure head){
+    while(head != null and visited member in head != 1) do
+      set visited member in head to 1
+
+      if(value member in head == value)
+        clear all visits in nodes
+        return head
+
+      set head to the next node
+    clear all visits in nodes
+    end
+  }
+*/
 
 void *locate(float value, struct Item *head) {
 
@@ -142,6 +183,24 @@ void *locate(float value, struct Item *head) {
   return 0;
 }
 
+/* Pseudocode
+  retrieve(pointer, structure head) {
+    clear all visits in nodes
+  
+    while(head != null and visited member in head != 1) do
+      set visited member in head to 1
+
+      if(head == pointer)
+        clear all visits in nodes
+        return value member in head
+
+      set head to the next node
+
+    clear all visits in nodes
+    end
+  }
+*/
+
 float retrieve(void *pointer, struct Item *head) {
   clearVisits(&head);
   while (head != NULL && head->visited != 1) {
@@ -155,6 +214,26 @@ float retrieve(void *pointer, struct Item *head) {
   clearVisits(&head);
   return 0;
 }
+
+/*Pseudocode
+  insert(position pointer, value, next pointer){
+    if(position pointer == null)
+      print "the previous node cannot be NULL"
+      end
+
+    allocate new structure called new_node
+    set value member in new_node to value
+    set new_node next node pointer to position pointer next node pointer
+    set position pointer next node pointer to new_node
+    set new_node previous node pointer to position pointer
+
+    if(new_node next node pointer != null)
+      set new_node next node previous node pointer to new_node
+    elseif(new_node next node pointer == null)
+      set new_node next node pointer to next pointer
+  end
+  }
+*/
 
 void insert(struct Item *item, int value, struct Item *head) {
   if (item == NULL) {
@@ -178,6 +257,18 @@ void insert(struct Item *item, int value, struct Item *head) {
     new_node->next = head;
 }
 
+/* Pseudocode
+  printList(structure head){
+    set struct temp pointer to head pointer
+    while(temp!=null and visited member in temp != 1)
+      print value member in temp
+      set visited member in temp to 1
+      set temp to next node
+    clear all visits in nodes
+    end
+  }
+*/
+
 int printList(struct Item **head) {
   struct Item *temp = *head;
   while (temp != NULL && temp->visited != 1) {
@@ -188,6 +279,27 @@ int printList(struct Item **head) {
   clearVisits(head);
   return 0;
 }
+
+/*Pseudocode
+  removeItem(struct head, pointer){
+    set struct temp pointer to head pointer and prev pointer
+    clear all visits in nodes
+    if(temp != null and temp == pointer)
+      set head pointer to next member in temp
+      free temp
+      end
+    while(temp != null and temp != pointer and visited member in temp != 1) do
+      set visited member in temp to 1
+      set prev to temp
+      set temp to next node
+    if(temp == null)
+      clear all visits in nodes
+      end
+    set next member in prev to to next member in temp
+    clear all visits in nodes
+    free temp
+  }
+*/
 
 void removeItem(struct Item **head, void *pointer) {
   struct Item *temp = *head, *prev;
@@ -216,6 +328,20 @@ void removeItem(struct Item **head, void *pointer) {
   free(temp);
 }
 
+/*Pseudocode
+  findMax(structure head){
+    declare struct max pointer and temp pointer
+    set temp to max to head pointer
+    clear all visits in nodes
+    while(temp != null and visited member in temp != 1) do
+      if(value member in temp > value member in max)
+        set max to temp
+      set visited member in temp to 1
+      set temp to next member in temp
+    clear all visits in nodes
+    return max value
+  }
+*/
 float findMax(struct Item **head) {
   struct Item *max, *temp;
 
@@ -233,6 +359,21 @@ float findMax(struct Item **head) {
   clearVisits(head);
   return max->value;
 }
+
+/*Pseudocode
+  findMin(struct head){
+    declare struct min pointer and temp pointer
+    set temp to min to head pointer
+    clear all visits in nodes
+    while(temp != null and temp visited != 1) do
+      if(temp value < min value)
+        set min to temp
+      set temp visited to 1
+      set temp to next node
+    clear all visits in nodes
+    return min value
+  }
+*/
 
 float findMin(struct Item **head) {
   struct Item *min, *temp;
@@ -252,6 +393,19 @@ float findMin(struct Item **head) {
   return min->value;
 }
 
+/*Pseudocode
+  size(struct head){
+  declare struct current pointer and set to head
+  declare and set i to 0
+  while(current != null and current visited != 1) do
+    i++
+    set current visited to 1
+    set current to next node
+  clear all visits in nodes
+  return i
+  }
+*/
+
 int size(struct Item *head) {
   struct Item *current = head;
   int i = 0;
@@ -264,11 +418,30 @@ int size(struct Item *head) {
   return i;
 }
 
+/*Pseudocode
+  isEmpty(struct head) {
+    if(head == null)
+      return 1
+    return 0    
+  }
+*/
+
 int isEmpty(struct Item *head) {
-  if (head == NULL)
-    return 1;
-  return 0;
+  return head == NULL;
 }
+
+/*Pseudocode
+  next(item pointer, struct head) {
+    clear all visits in nodes
+    while(head != null and head visited != 1) do
+      if(head == item)
+        clear all visits in nodes
+        return head next value
+      set head to head next
+    clear all visits in nodes
+    end
+  }
+*/
 
 float next(void *item, struct Item *head) {
   clearVisits(&head);
@@ -283,6 +456,17 @@ float next(void *item, struct Item *head) {
   return 0;
 }
 
+/*Pseudocode
+  prev(item pointer, struct head pointer){
+    clear all visits in nodes
+    while(head != null and head visited != 1) do
+      if(head == item)
+        clear all visits in nodes
+        return head prev value
+    end
+  }
+*/
+
 float prev(void *item, struct Item *head) {
   clearVisits(&head);
   while (head != NULL && head->visited != 1) {
@@ -294,6 +478,17 @@ float prev(void *item, struct Item *head) {
   }
   return 0;
 }
+
+/*Pseudocode
+  makeNull(struct head pointer) {
+    declare struct temp pointer
+    while(head != null) do
+      set temp to head
+      set head to head next
+      free temp
+  end
+  }
+*/
 
 void makeNull(struct Item *head) {
   struct Item *temp;
