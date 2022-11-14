@@ -1,6 +1,6 @@
 # Pseudokody
 
-## [Działania z kolejką](3/Działania z kolejką.c)
+## [Działania z kolejką](labaratorium/3/Działania z kolejką.c)
 
 ### insert(item, struct end)
 ```
