@@ -276,6 +276,7 @@ int printList(struct Item **head) {
     temp->visited = 1;
     temp = temp->next;
   }
+  printf("Cycle detected\n");
   clearVisits(head);
   return 0;
 }
