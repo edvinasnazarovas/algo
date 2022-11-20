@@ -1,6 +1,6 @@
 # Cwiczenie 3
 
-### Zadania
+### Zadanie 1
 
 $$
 \begin{flalign}
@@ -59,5 +59,72 @@ $$
 & f(n) \in \theta(g(n)) &\\
 & n => 3 &\\
 & c_1 <= 1 \quad c_2 => 2 &\\
+\end{flalign}
+$$
+
+### Zadanie 2
+$$
+\begin{flalign}
+& (x + y)^2\in\theta(x^2+y^2) &\\
+& f(n) = (x + y)^2 &\\
+& x = 2 \quad y = 2 &\\
+& (2 + 2) = 16 &\\
+& (2^2 + 2^2) * c_1 \leq 16 &\\
+& 8c_1 \leq 16 &\\
+& c_1 \leq 2 &\\
+&8c_2 \geq 16 &\\
+&c_2 \geq 2 &\\
+& c_1.g(n) \leq f(n) \leq c_2.g(n) &\\
+& 16 \leq 16 \leq 16 &\\
+& odp.:f(n)\in\theta(g(n))\ dla:\ c_1\leq2,\quad c_2\geq2,\quad n=16 &\\
+\end{flalign}
+$$
+
+### Zadanie 3
+$$
+\begin{flalign}
+& 17\in\theta(1) &\\
+& 1c_1 \leq 17 &\\
+& c_1 \leq 1 &\\
+& 1c_2\geq 17 &\\
+& 1c_2\geq1 & \\
+& c_1.g(n) \leq 17 \leq c_2.g(n) &\\
+& 17 \leq 17 \leq 17 &\\
+& odp.:17\in\theta(1) &\\
+\end{flalign}
+$$
+
+## Zadanie 4
+$$
+\begin{flalign}
+& 2(n-1)/2\in\theta(n^2) &\\
+& n = 3 &\\
+& 2(3-1)/2=2 &\\
+& c_1(2^2) \leq 2 &\\
+& 4c_1\leq2 &\\
+&c_1 \leq 0 &
+& c_2(2^2) \geq 2 &\\
+& 4c_2\geq2 &\\
+&c_2\geq1&\\
+&c_1.g(n) \leq f(n) \leq c_2.g(n) &\\
+& odp.:2(n-1)/2\ni\theta(n^2),\ czyli\ 2(n-1)/2\ nie\ jest\ \theta(n^2) &\\
+\end{flalign}
+$$
+
+## Zadanie 5
+$$
+\begin{flalign}
+& max(n^3, 10n^2)\in\theta(n^3) &\\
+& f(n) = max(n^3, 10n^2) &\\
+& n=11 &\\
+& max(11^3, 10*11^2)=1331 &\\
+& c_1(11^3)\leq1331 &\\
+& 1331c_1\leq1331 &\\
+& c_1\leq1 &\\
+& 1331c_2\geq1331 &\\
+& c_2\geq1 &\\
+& c_1.g(n) \leq f(n) \leq c_2.g(n) &\\
+& 1331 \leq 1331 \leq 1331 &\\
+& odp.:max(n^3, 10n^2)\in\theta(n^3)\ dla:\ n=11,\ c_1=1,\ c_2=1 &\\
 \end{flalign}
 $$
