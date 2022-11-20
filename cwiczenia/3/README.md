@@ -128,3 +128,53 @@ $$
 & odp.:max(n^3, 10n^2)\in\theta(n^3)\ dla:\ n=11,\ c_1=1,\ c_2=1 &\\
 \end{flalign}
 $$
+
+## Uporządkuj następujące funkcje według rosnącej
+17</br>
+loglogn</br>
+logn</br>
+log^2n</br>
+n</br>
+
+## Oblicz złożoność czasową dla każdego fragmentu kodu ćwiczenia.
+```c
+1 function someFunction(n) {
+2       i, j = 0;
+3       for (i; i < n*1000 ; i++) {
+4           for (j; j < n*20; j++) {
+5               printf("%d", i + j);
+6           }
+7       }
+9   }
+```
+linija 2: O(1)</br>
+linija 3: iter k i=n*1000+k-1=n</br>
+k - 1 = n - n * 1000</br>
+$$ k = n - n_1000 + 1 $$
+O(n)</br>
+linija 4: iter k i=n*20+k-1</br>
+k - 1 = n - n * 20</br
+$$ k = n - n_20 + 1 $$
+O(n)</br>
+$$Złożoność\ czasowa\ =\ O(n^2)$$</br></br>
+
+```c
+1 function someFunction(n) {
+2       i, j, k, l = 0;
+3       for (i; i < n ; i++) {
+4           for (j; j < n; j++) {
+5               for (k; k < n; j++) {
+6                   for (l; l < 10; j++) {
+7                       printf("%d", i + j + k + l);
+8                   }
+9              }
+10           }
+11       }
+12  }
+```
+linija 2: O(1)</br>
+linija 3: O(n)</br>
+linija 4: O(n)</br>
+linija 5: O(n)</br>
+linija 6: O(1)</br>
+$$Złożoność\ czasowa\ =\ O(n^3)$$</br></br>
