@@ -178,3 +178,44 @@ linija 4: O(n)</br>
 linija 5: O(n)</br>
 linija 6: O(1)</br>
 $$Złożoność\ czasowa\ =\ O(n^3)$$</br></br>
+
+## Notacja Big O
+```c
+1 function someFunction(n) {
+2       i = 0;
+3       for (i; i < 1000 ; i++) {
+4           printf("%d", i);
+5       }
+6   }
+```
+$$O(1)$$</br>
+
+```c
+1 function someFunction(n) {
+2       i = 0;
+3       for (i; i < n * 10 ; i++) {
+4           printf("%d", i);
+5       }
+6   }
+```
+$$O(n*10)$$</br>
+
+```c
+1 function someFunction(n) {
+2       i = 0;
+3       for (i; i < n  ; i = i * 2) {
+4           printf("%d", i);
+5       }
+6   }
+            
+```
+$$O(logn)$$</br>
+
+```c
+function someFunction(n) {
+3       while (true) {
+4           printf("%d", n);
+5       }
+6   }
+```
+$$O(\infty)$$</br>
