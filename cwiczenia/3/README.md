@@ -180,6 +180,7 @@ linija 6: O(1)</br>
 $$Złożoność\ czasowa\ =\ O(n^3)$$</br></br>
 
 ## Notacja Big O
+### 1
 ```c
 1 function someFunction(n) {
 2       i = 0;
@@ -190,6 +191,7 @@ $$Złożoność\ czasowa\ =\ O(n^3)$$</br></br>
 ```
 $$O(1)$$</br>
 
+### 2
 ```c
 1 function someFunction(n) {
 2       i = 0;
@@ -200,6 +202,7 @@ $$O(1)$$</br>
 ```
 $$O(n*10)$$</br>
 
+### 3
 ```c
 1 function someFunction(n) {
 2       i = 0;
@@ -211,6 +214,7 @@ $$O(n*10)$$</br>
 ```
 $$O(logn)$$</br>
 
+### 4
 ```c
 function someFunction(n) {
 3       while (true) {
