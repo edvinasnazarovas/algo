@@ -1,6 +1,6 @@
 # Cwiczenie 3
 
-### Zadanie 1
+## Zadanie 1
 
 $$
 \begin{flalign}
@@ -62,7 +62,7 @@ $$
 \end{flalign}
 $$
 
-### Zadanie 2
+## Zadanie 2
 $$
 \begin{flalign}
 & (x + y)^2\in\theta(x^2+y^2) &\\
@@ -80,7 +80,7 @@ $$
 \end{flalign}
 $$
 
-### Zadanie 3
+## Zadanie 3
 $$
 \begin{flalign}
 & 17\in\theta(1) &\\
