@@ -12,9 +12,6 @@ function Arytm(array arr, n, d) {
   
   if(arr[n] - arr[n-1] != d)
     return 0
-  
-  if(arr[n] <= 0 or arr[n-1] <= 0)
-    return d
     
   else
     return Arytm(arr, n - 1)
