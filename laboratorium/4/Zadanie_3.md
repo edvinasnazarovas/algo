@@ -1,13 +1,14 @@
 Napisz funkcję rekurencyjną do obliczenia n-tej liczby ciągu arytmetycznego.
 
 ```
-function Arytm(array arr, n) {
+d = arr[n] - arr[n - 1]
+set n to size of array
+
+function Arytm(array arr, n, d) {
   if(n == 1)
-    return 1
+    return d
   
   sort arr
-  
-  set d to the second element of arr minus the first element of arr
   
   if(arr[n] - arr[n-1] != d)
     return 0
@@ -16,6 +17,6 @@ function Arytm(array arr, n) {
     return d
     
   else
-    Arytm(arr, n--)
+    return Arytm(arr, n - 1)
 }
 ```
