@@ -1,4 +1,4 @@
-Napisz funkcję rekurencyjną do wyprowadzenia n-tej liczby trojkatu Paskalia.
+Napisz funkcję rekurencyjną do wyprowadzenia n-tej liczby trójkątu Paskala.
 
 ```
 function pascal(row, col) {
