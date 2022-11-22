@@ -1,5 +1,6 @@
 Napisz funkcję rekurencyjną do obliczenia n-tej liczby ciągu arytmetycznego.
 
+```
 function Arytm(array arr, n) {
   if(n == 1)
     return 1
@@ -17,3 +18,4 @@ function Arytm(array arr, n) {
   else
     Arytm(arr, n--)
 }
+```
