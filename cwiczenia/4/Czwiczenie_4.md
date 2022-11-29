@@ -11,6 +11,18 @@
 
 ## $T(n) = 3T(n/2)+n?$
 
+$$
+\begin{flalign}
+& a = 3 &\\
+& b = 2 &\\
+& k = 0 &\\
+& p = 0 &\\
+& b^k = 2 &\\
+& Case\ 1\ =\ T(n) = \theta(n^{log_b a}) &\\
+& log_b a = log_2 3 = 1.58 &\\
+\end{flalign}
+$$
+
 ## $T(n) = 3T(n/2)+n^2?$
-$$a = 3$$
-$n/b = n/2$
+
+
