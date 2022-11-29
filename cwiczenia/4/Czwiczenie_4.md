@@ -75,7 +75,7 @@ $$
 \end{flalign}
 $$
 
-$$odp.:\ T(n) = \theta (n^1.26)$$
+$$odp.:\ T(n) = \theta (n^{1.26})$$
 
 ## $T(n) = 4T(n/3) + n^2?$
 
