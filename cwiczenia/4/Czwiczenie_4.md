@@ -21,9 +21,10 @@ $$
 & Case\ 1\ =\ T(n) = \theta(n^{log_b a}) &\\
 & log_b a = log_2 3 = 1.58 &\\
 & T(n) = \theta (n^{log_b a}) &\\
-& T(n) = \theta (n^{1.58}) &\\
 \end{flalign}
 $$
+
+$$odp.: T(n) = \theta (n^{1.58})$$
 
 ## $T(n) = 3T(n/2)+n^2?$
 
@@ -37,9 +38,10 @@ $$
 & a < b^k &\\
 & Case\ 3\ =\ T(n) = \theta(n^k log^p n) &\\
 & T(n) = \theta (n^2log^0n) &\\
-& odp.:\ T(n) = \theta (n^2) &\\
 \end{flalign}
 $$
+
+$$odp.:\ T(n) = \theta (n^2)$$
 
 ## $T(n) = 8T(n/2)+n^3?$
 
@@ -53,9 +55,10 @@ $$
 & a = b^k &\\
 & Case\ 2\ =\ T(n) = θ (n^{log_b a}.log^{p+1}n) &\\
 & T(n) = \theta (n^{log_2 8}.log^{0 + 1}n) &\\
-& odp.:\ T(n) = \theta (n^3logn) &\\
 \end{flalign}
 $$
+
+$$odp.:\ T(n) = \theta (n^3logn)$$
 
 ## $T(n) = 4T(n/3)+n?$
 
@@ -69,9 +72,10 @@ $$
 & a > b^k &\\
 & Case\ 1\ =\ T(n) = \theta (n^{log_b a}) &\\
 & T(n) = \theta (n^{log_3 4}) &\\
-& odp.:\ T(n) = \theta (n^1.26) &\\
 \end{flalign}
 $$
+
+$$odp.:\ T(n) = \theta (n^1.26)$$
 
 ## $T(n) = 4T(n/3) + n^2?$
 
@@ -85,9 +89,10 @@ $$
 & a < b^k &\\
 & Case\ 3\ =\ T(n) = \theta (n^k log^p n) &\\
 & T(n) = \theta (n^2 log^0 n) &\\
-& odp.:\ T(n) = \theta (n^2) &\\
 \end{flalign}
 $$
+
+$$odp.:\ T(n) = \theta (n^2)$$
 
 ## $T(n) = 9T(n/3) + n^2?$
 
@@ -102,6 +107,7 @@ $$
 & Case\ 2\ =\ T(n) = θ (n^{log_b a}.log^{p+1}n) &\\
 & T(n) = \theta (n^{log_3 9}.log^{0+1}n) &\\
 & T(n) = \theta (n^2.log^1 n) &\\
-& odp.:\ T(n) = \theta (n^2 logn) &\\
 \end{flalign}
 $$
+
+$$odp.:\ T(n) = \theta (n^2 logn)$$
