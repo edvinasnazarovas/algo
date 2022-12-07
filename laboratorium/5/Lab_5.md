@@ -34,7 +34,7 @@ function merge(array, l, mid, r) {
     else
       array[k] = Right[j]
       j++
-    k++
+      k++
   
   while(i < size1)
     arr[k] = Left[i]
