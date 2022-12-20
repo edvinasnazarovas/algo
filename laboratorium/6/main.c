@@ -1,4 +1,4 @@
-#include "metody.h"
+#include "sort.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -9,15 +9,14 @@ int main() {
   FILE *fptr;
   clock_t start, end;
   double execution_time;
-  char fileName[] = "random.dat";
 
   // Generujemy random.dat
-  fptr = fopen(fileName, "w");
+  fptr = fopen("random.dat", "w");
   generate(fptr, n);
   fclose(fptr);
 
   // File values to array
-  fptr = fopen(fileName, "r");
+  fptr = fopen("random.dat", "r");
 
   for (int i = 0; i < n; i++) {
     fscanf(fptr, "%u", &arr[i]);
