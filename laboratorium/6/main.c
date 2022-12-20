@@ -4,7 +4,7 @@
 #include <time.h>
 
 int main() {
-  int n = 10;
+  int n = 15;
   int arr[n];
   FILE *fptr;
   clock_t start, end;
