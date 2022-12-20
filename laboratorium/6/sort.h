@@ -100,7 +100,7 @@ void mergeSort(int arr[], int l, int r) {
 void printArray(int arr[], int size) {
   int i;
   for (i = 0; i < size; i++)
-    printf("%u ", arr[i]);
+    printf("%d ", arr[i]);
   printf("\n");
 }
 
@@ -108,7 +108,7 @@ void generate(FILE *fptr, int n) {
   int i = 0;
   while (i < n) {
     int j = -138573 + rand() % (138573 - (-138573) + 1);
-    fprintf(fptr, "%u\n", j);
+    fprintf(fptr, "%d\n", j);
     i = i + 1;
   }
 }
