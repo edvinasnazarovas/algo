@@ -20,7 +20,7 @@ int main() {
   fptr = fopen(fileName, "r");
 
   for (int i = 0; i < n; i++) {
-    fscanf(fptr, "%d", &arr[i]);
+    fscanf(fptr, "%u", &arr[i]);
   }
 
   fclose(fptr);
