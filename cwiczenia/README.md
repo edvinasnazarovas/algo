@@ -16,7 +16,7 @@ function longestWord(string) {
    return longestString
 }
 
-deleteWord(string, key) {
+function deleteWord(string, key) {
   i, j = 0
   k = 0
   count = 0
