@@ -19,7 +19,6 @@ function longestWord(string) {
 function deleteWord(string, key) {
   i, j = 0
   k = 0
-  count = 0
   for(i = 0; string[i] != ' '; i++)
     if(string[i] == ' ')
       string1[k][j] = '\0'
