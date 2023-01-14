@@ -1,3 +1,10 @@
+/*
+ * Nazwa pliku: Zadanie_4.c
+ * Autor: Edvinas
+ * Data: 2022-11-29
+ * Opis: Funkcja rekurencyjna do obliczenia n-tej liczby ciągu geomytrecznego
+ */
+
 #include <stdio.h>
 
 float geo(float a, float r, int n);
