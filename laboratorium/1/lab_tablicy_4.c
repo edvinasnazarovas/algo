@@ -1,41 +1,33 @@
-#include <math.h>
+/*
+ * Nazwa pliku: lab_tablicy_4.c
+ * Autor: Edvinas
+ * Data: 2022-10-30
+ * Opis: Obliczenie sumy, ilosci i mnozenia elementow tablicy.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-//Obliczenie sumy, ilosci i mnozenia elementow tablicy.
-
 int main(void) {
-  double a, x, sum = 0, mnoz = 1;
-  int d, n, ilosc;
+  double sum = 0, mnoz = 1;
+  int d, i;
   srand(time(NULL));
 
   printf("Wprowadz dlugosc tablicy: ");
   scanf("%d", &d);
 
-  double array[d+1];
+  double array[d];
 
-  int i = d;
-  while (i--) {
+  for (i = 0; i < d; i++) {
     array[i] = rand() % 20;
     printf("%lf\n", array[i]);
+    sum += array[i];
+    mnoz *= array[i];
   }
 
-  array[d+1] = 0;
-
-  i = d;
-  while (i--) {
-    sum = sum + array[i];
-  }
-
-  i = d;
-  while (i--) {
-    mnoz = mnoz * array[i];
-  }
-  
-  //printf("Ilosc = %d\n", ilosc);
   printf("suma = %lf\n", sum);
   printf("mnozenia = %lf\n", mnoz);
-  //printf("ilolsc elementow = %lf\n", ilosc);
+  printf("ilosc = %d\n", d);
   return 0;
 }
