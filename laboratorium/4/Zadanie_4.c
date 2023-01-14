@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-float geo(float a, float r, int n, float sum);
+float geo(float a, float r, int n);
 
 int main(void) {
   printf("Hello World\n");
