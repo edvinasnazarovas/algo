@@ -1,3 +1,10 @@
+/*
+ * Nazwa pliku: Cwiczenie_5.c
+ * Autor: Edvinas
+ * Data: 2022-12-05
+ * Opis: Realizacja algorytmow sortowania z wykorzystaniem plika losowych liczb.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
