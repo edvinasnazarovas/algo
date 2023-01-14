@@ -1,3 +1,10 @@
+/*
+ * Nazwa pliku: lab_tablicy_3.c
+ * Autor: Edvinas
+ * Data: 2022-10-13
+ * Opis: Oblicz funkcja y=ax^2 znaczenia, gdy a - stałe, x jest wybierany z tablicy X(n)
+ */
+
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
@@ -25,7 +32,7 @@ int main(void) {
   }
 
   x = array[n];
-  printf("%lf = ", (a*x*x));
+  printf("%lf = ", (a*pow(x, 2));
   printf("%lf * ", a);
   printf("%lf^2\n", x);
   
