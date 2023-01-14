@@ -1,3 +1,10 @@
+/*
+ * Nazwa pliku: Zadanie_5.c
+ * Autor: Edvinas
+ * Data: 2022-11-29
+ * Opis: Funkcja rekurencyjna do wyprowadzenia n-tej liczby trojkatu Paskalia
+ */
+
 #include <stdio.h>
  
 long Factorial(int);
