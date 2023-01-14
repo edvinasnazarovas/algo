@@ -1,3 +1,10 @@
+/*
+ * Nazwa pliku: main.c
+ * Autor: Edvinas
+ * Data: 2022-12-23
+ * Opis: Realizacja metod sortowania z Wykladu 5
+ */
+
 #include "sort.h"
 #include <stdio.h>
 #include <stdlib.h>
