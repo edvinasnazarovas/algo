@@ -1,22 +1,38 @@
 #include <stdio.h>
 #include <math.h>
 
-//Obliczyc funkcja y = ax^2 znaczenia, gdy a - stale. x - zmieniase z x0 do xn, krokiem hx
-
 int main(void) {
   double a, x, x0, xn, xh;
 
-  printf("Wprowadz a: ");
+  printf("Wprowadź a: ");
   scanf("%lf", &a);
 
-  printf("Wprowadz x0: ");
+  //walidaacja zmiennej a
+  while(a == 0) {
+      printf("A nie może być równe zero, wprowadź a ponownie: ");
+      scanf("%lf", &a);
+  }
+
+  printf("Wprowadź x0: ");
   scanf("%lf", &x0);
 
-  printf("Wprowadz xn: ");
+  //walidaacja zmiennej x0
+  while(x0 >= xn) {
+      printf("x0 musi być mniejsze od xn, wprowadź x0 ponownie: ");
+      scanf("%lf", &x0);
+  }
+
+  printf("Wprowadź xn: ");
   scanf("%lf", &xn);
 
-  printf("Wprowadz xh: ");
+  printf("Wprowadź xh: ");
   scanf("%lf", &xh);
+
+  //walidaacja zmiennej hx
+  while(xh <= 0) {
+      printf("hx musi być większe od zera, wprowadź hx ponownie: ");
+      scanf("%lf", &xh);
+  }
 
   x = x0;
 
