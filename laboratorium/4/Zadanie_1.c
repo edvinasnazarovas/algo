@@ -1,8 +1,8 @@
 /*
- * File name: Zadanie_1.c
- * Author: Edvinas
- * Date: 2022-11-22
- * Description: Dana calkowita liczba n >=1. Napisz rekurencyjna funkcja takiej liczby , ktora wypelnia taki warunek 2^a-1 <= n < 2^a
+ * Nazwa pliku: Zadanie_1.c
+ * Autor: Edvinas
+ * Data: 2022-11-29
+ * Opis: Dana calkowita liczba n >=1. Napisz rekurencyjna funkcja takiej liczby , ktora wypelnia taki warunek 2^a-1 <= n < 2^a
  */
 
 #include <stdio.h>
