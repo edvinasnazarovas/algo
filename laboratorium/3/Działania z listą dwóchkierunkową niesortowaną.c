@@ -10,7 +10,7 @@ int find(float value, struct Item *head);
 
 int printList(struct Item *head);
 
-void insert(struct Item *head, int item);
+void insert(struct Item *head, float item);
 
 float findMax(struct Item **head);
 
