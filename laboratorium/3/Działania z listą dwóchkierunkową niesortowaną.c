@@ -170,7 +170,7 @@ float retrieve(void *pointer, struct Item *head) {
   }
 */
 
-void insert(struct Item *head, int item) {
+void insert(struct Item *head, float item) {
   if (head == NULL) {
     printf("the given previous node cannot be NULL");
     return;
