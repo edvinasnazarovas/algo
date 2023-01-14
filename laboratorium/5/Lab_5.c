@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define SEED_MAX_LIMIT 138573
+
 void binarySearchRecursive(int arr[], int lo, int hi, int key);
 void merge(int arr[], int l, int mid, int r);
 void mergeSort(int arr[], int l, int r);
@@ -33,7 +35,7 @@ int main(void) {
   start = clock();
   
   while (i < n) {
-    int j = 1 + rand() % 138573;
+    int j = 1 + rand() % SEED_MAX_LIMIT;
     fprintf(fptr, "%d\n", j);
     i = i + 1;
   }
