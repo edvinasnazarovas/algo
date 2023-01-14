@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define SEED_MAX_LIMIT 138573
+
 void swap(int *xp, int *yp) {
   int temp = *xp;
   *xp = *yp;
@@ -107,7 +109,7 @@ void printArray(int arr[], int size) {
 void generate(FILE *fptr, int n) {
   int i = 0;
   while (i < n) {
-    int j = -138573 + rand() % (138573 - (-138573) + 1);
+    int j = -SEED_MAX_LIMIT + rand() % (SEED_MAX_LIMIT - (-SEED_MAX_LIMIT) + 1);
     fprintf(fptr, "%d\n", j);
     i = i + 1;
   }
