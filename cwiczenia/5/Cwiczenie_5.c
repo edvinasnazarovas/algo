@@ -129,7 +129,7 @@ int main() {
   fptr = fopen("random.dat", "r");
 
   for (int i = 0; i < n; i++) {
-    fscanf(fptr, "%d", &arr[i]);
+    fscanf(fptr, "%ld", &arr[i]);
   }
 
   fclose(fptr);
