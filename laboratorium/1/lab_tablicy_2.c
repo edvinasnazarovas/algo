@@ -1,4 +1,12 @@
+/*
+ * Nazwa pliku: lab_tablicy_2.c
+ * Autor: Edvinas
+ * Data: 2022-10-13
+ * Opis: Oblicza funkcję y = ax^2 znaczenia, gdy a-stałe, x-zmienia się z x0 do xn, krokiem hx
+ */
+
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
 int main(void) {
