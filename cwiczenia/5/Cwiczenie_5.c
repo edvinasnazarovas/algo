@@ -133,17 +133,15 @@ int main() {
   }
 
   fclose(fptr);
-
-  int array_size = sizeof(arr) / sizeof(arr[0]);
   
   start = clock();
-  bubbleSort(arr, array_size);
+  bubbleSort(arr, n);
   end = clock();
   
   execution_time = ((double)(end - start)) / CLOCKS_PER_SEC;
 
   printf("Sorted array: \n");
-  printArray(arr, array_size);
+  printArray(arr, n);
   printf("\nTime elapsed: %f\n", execution_time);
   return 0;
 }
