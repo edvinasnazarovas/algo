@@ -157,7 +157,7 @@ void binarySearchRecursive(int arr[], int lo, int hi, int key) {
 }
 
 void binarySearch(int arr[], int f, int l, int n) {
-  int i, mid;
+  int mid;
   kroki1++;
   mid = (f + l) / 2;
 
