@@ -121,20 +121,3 @@ void removeItem(int pos, struct Item **head) {
 
   free(temp);
 }
-
-/*Pseudocode
-  printList(struct head pointer) {
-    while(head != null) do
-      print head value
-      set head to head next
-    end
-  }
-*/
-
-int printList(struct Item *head) {
-  while (head != NULL) {
-    printf("|%f|  ", head->value);
-    head = head->next;
-  }
-  return 0;
-}
