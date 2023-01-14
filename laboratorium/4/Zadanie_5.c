@@ -7,7 +7,7 @@
 
 #include <stdio.h>
  
-long Factorial(int);
+int pascal(int row, int col);
  
 int main()
 {
