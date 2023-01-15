@@ -1,7 +1,7 @@
 /*
  * Nazwa pliku: dzialania_z_tablicami.c
  * Autor: Edvinas
- * Data: 2022-11-2
+ * Data: 2022-11-02
  * Opis: Działanie z tablicami
  */
 
