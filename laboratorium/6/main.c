@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
+int main(void) {
   int n = 15;
   int arr[n];
   FILE *fptr;
