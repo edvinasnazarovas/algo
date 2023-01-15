@@ -1,17 +1,14 @@
+/*
+ * Nazwa pliku: stos.c
+ * Autor: Edvinas
+ * Data: 2022-11-02
+ * Opis: Działania z stosem
+ */
+
 struct Item {
   int value;
   struct Item *next;
 };
-
-/*void top(float value, Item *s)
-
-void makeNull(Item *s)
-
-void pop(Item *s)
-
-void push(float value, Item *s)
-
-void isEmpty(Item *s)*/
 
 #include <limits.h>
 #include <stdio.h>
@@ -19,15 +16,32 @@ void isEmpty(Item *s)*/
 
 struct Item *newNode(int data);
 
+// Sprawdz czy pusty
 int isEmpty(struct Item *root);
 
+// Dodaj element do gory stosu.
 void push(struct Item **root, int data);
 
+// Wyberanie elementa ze stosa
 int pop(struct Item **root);
 
+// Wyswetlien elementa ze gory stosu.
 int peek(struct Item *root);
 
-void main(void) {
+// Wyczysc
+void makeNull(struct Item **root);
+
+void makeNull(struct Item **root) {
+  struct Item *temp, *current = *root;
+  while (current) {
+    temp = current->next;
+    free(current);
+    current = temp;
+  }
+  *root = NULL;
+}
+
+int main() {
   struct Item *root = NULL;
 
   push(&root, 10);
@@ -38,7 +52,11 @@ void main(void) {
 
   printf("Top element is %d\n", peek(root));
 
-  return;
+  makeNull(&root);
+
+  printf(isEmpty(root) != 0 ? "Stack is empty\n" : "Stack is not empty\n");
+
+  return 0;
 }
 
 // Funkcii
