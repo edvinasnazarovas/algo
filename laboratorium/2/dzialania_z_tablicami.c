@@ -8,8 +8,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Ile elementow w tablice.
 int size;
 
+// Poszukiwanie elementa. Podajemy wartosc i tablica.
 int find(int *arr, int item) {
   for (int i = 0; i < size; i++) {
     if (arr[i] == item) {
@@ -19,6 +21,8 @@ int find(int *arr, int item) {
   return -1;
 }
 
+// Dodanie elementa. Na n pozicja tablicy. Sprawdzenie czy jest tablica z
+// odpowiednia ilością elementów przed dodaniem.
 void insert(int item, int pos, int **arr) {
   if (pos < size) {
     *arr = (int *)realloc(*arr, (size + 1) * sizeof(int));
@@ -30,6 +34,8 @@ void insert(int item, int pos, int **arr) {
   }
 }
 
+// Kasowanie elementa. Sprawdzenie czy jest tablica z odpowiednia ilością
+// elementów przed kasowaniem,.
 void rem(int pos, int **arr) {
   if (pos < size) {
     for (int i = pos; i < size - 1; i++) {
@@ -40,6 +46,10 @@ void rem(int pos, int **arr) {
   }
 }
 
+// Sprawdz czy pusta tablica.
+int isEmpty(int *arr) { return size == 0; }
+
+// Znajdz maksymalny
 int findMax(int *arr) {
   int max = arr[0];
   for (int i = 1; i < size; i++) {
@@ -50,6 +60,7 @@ int findMax(int *arr) {
   return max;
 }
 
+// Znajdz minimalny
 int findMin(int *arr) {
   int min = arr[0];
   for (int i = 1; i < size; i++) {
@@ -60,6 +71,7 @@ int findMin(int *arr) {
   return min;
 }
 
+// Wyprowadzić elementy tablicy
 void printTable(int *arr) {
   printf("\n");
   for (int i = 0; i < size; i++) {
@@ -93,6 +105,8 @@ int main(void) {
 
   printf(find(arr, 4) != -1 ? "Found in pos %d\n" : "Not found\n",
          find(arr, 4));
+
+  printf(isEmpty(arr) != 0 ? "\nArray is empty\n" : "\n Array is not empty\n");
 
   free(arr);
 
