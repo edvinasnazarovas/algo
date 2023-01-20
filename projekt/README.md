@@ -68,24 +68,24 @@ Koniec
 ### Pseudokod :page_facing_up:
 
 ```
-removeDuplicates(list)
-Input:
-list - pointer to a DoubleLinkedList object
-Output: None
-Begin
-1. Check if the list is NULL or empty, if true return
-2. Set current to the head of the list
-3. While current is not NULL
-3.1 Set next to current->next
-3.2 Set duplicate to current->next
-3.3 While duplicate is not NULL
-3.3.1 If duplicate->data is equal to current->data
-3.3.1.1 Set duplicateNext to duplicate->next
-3.3.1.2 Call deleteNode(list, duplicate) to remove the duplicate node
-3.3.1.3 Set duplicate to duplicateNext
-3.3.2 Else
-3.3.2.1 Set duplicate to duplicate->next
-3.4 Set current to next
-4. End While
-End
+usuńDuplikaty(lista)
+Wejście:
+lista - wskaźnik na obiekt typu DoubleLinkedList
+Wyjście: None
+Początek
+1. Sprawdź czy lista jest pusta lub NULL, jeśli tak zwróć
+2. Ustaw aktualny element na głowę listy
+3. Dopóki aktualny element jest różny od NULL
+3.1 Ustaw następny na aktualny->następny
+3.2 Ustaw duplikat na aktualny->następny
+3.3 Dopóki duplikat jest różny od NULL
+3.3.1 Jeśli duplikat->dane jest równe aktualny->dane
+3.3.1.1 Ustaw duplicateNext na duplikat->następny
+3.3.1.2 Wywołaj funkcję usuńNode(lista, duplikat) by usunąć duplikat
+3.3.1.3 Ustaw duplikat na duplicateNext
+3.3.2 W przeciwnym razie
+3.3.2.1 Ustaw duplikat na duplikat->następny
+3.4 Ustaw aktualny na następny
+4. Koniec pętli
+Koniec
 ```
