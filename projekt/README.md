@@ -21,6 +21,11 @@ End
 End function
 ```
 
+### Udowodnienie, że algorytm jest końcowy
+
+1. LCG spełnia wymagania generatorów liczb pseudolosowych, takie jak brak powtarzalności w sekwencji liczb, brak wzoru w rozkładzie liczb oraz brak uprzedniej zależności między liczbami.
+2. LCG jest oparty na matematycznej formule Xn+1 = (aXn + c) mod m, gdzie Xn to n-ta liczba w sekwencji, a, c i m to parametry użyte w algorytmie. Działanie algorytmu jest zgodne z tą formułą i spełnia warunki matematyczne związane z metodą liniowego kongruencji.
+
 ### Złożonośc
 
 1. Pierwszym krokiem jest inicjalizacja stanu początkowego, co jest operacją stałego czasu, O(1).
@@ -80,6 +85,13 @@ Początek
 4. Koniec pętli
 Koniec
 ```
+
+### Udowodnienie, że algorytm jest końcowy
+
+1. Algorytm deszyfrowania korzysta z sekwencji liczb pseudolosowych generowanych przez metodę liniowego kongruencji (LCG) i przesuwa znaki w tekście jawnym w przeciwną stronę, niż to robi algorytm szyfrowania.
+2. Algorytm deszyfrowania porusza się po ciągu tekstu jawnego za pomocą pętli for i dla każdego znaku wykonuje operacje zamiany znaku na wielką literę, sprawdzenie czy znak jest w zakresie od 'A' do 'Z', odejmowanie modulo 26 liczby pseudolosowej od indeksu znaku, i przypisanie nowej wartości znaku.
+3. Te operacje są odwrotne do operacji wykonywanych przez algorytm szyfrowania, co pozwala na odzyskanie pierwotnego tekstu jawnego.
+4. Algorytm deszyfrowania jest zgodny z algorytmem szyfrowania, ponieważ działa na tych samych parametrach, takich jak klucz, m, a, c, i przy użyciu tej samej sekwencji liczb pseudolosowych generowanej przez LCG.
 
 ### Złożoność
 
