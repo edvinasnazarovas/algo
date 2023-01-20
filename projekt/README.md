@@ -68,5 +68,24 @@ Koniec
 ### Pseudokod :page_facing_up:
 
 ```
-
+removeDuplicates(list)
+Input:
+list - pointer to a DoubleLinkedList object
+Output: None
+Begin
+1. Check if the list is NULL or empty, if true return
+2. Set current to the head of the list
+3. While current is not NULL
+3.1 Set next to current->next
+3.2 Set duplicate to current->next
+3.3 While duplicate is not NULL
+3.3.1 If duplicate->data is equal to current->data
+3.3.1.1 Set duplicateNext to duplicate->next
+3.3.1.2 Call deleteNode(list, duplicate) to remove the duplicate node
+3.3.1.3 Set duplicate to duplicateNext
+3.3.2 Else
+3.3.2.1 Set duplicate to duplicate->next
+3.4 Set current to next
+4. End While
+End
 ```
