@@ -139,3 +139,25 @@ Początek
 4. Koniec pętli
 Koniec
 ```
+
+### Udowodnienie, że algorytm jest końcowy
+
+1. Algorytm usuwania duplikatów przegląda listę dwukierunkową za pomocą pętli while, i dla każdego elementu przeszukuje pozostałą część listy w celu znalezienia duplikatów.
+2. Jeśli znajdzie duplikat, usuwa go za pomocą funkcji deleteNode, która jest odpowiedzialna za usunięcie elementu z listy.
+3. Dzięki temu algorytm usuwa wszystkie duplikaty z listy, nie naruszając pozostałych elementów.
+4. Algorytm jest skuteczny, ponieważ przeszukuje całą listę i usuwa wszystkie duplikaty, co zapewnia, że lista po jego wykonaniu zawiera tylko unikalne elementy.
+5. Złożoność czasowa tego algorytmu jest O(n^2) w najgorszym przypadku, ponieważ dla każdego elementu przeszukuje pozostałą część listy.
+
+### Złożoność czasowa
+
+Złożoność czasowa algorytmu usuwania duplikatów z listy dwukierunkowej jest określona jako O(n^2). Oznacza to, że czas działania algorytmu rośnie kwadratowo wraz ze wzrostem liczby elementów w liście. Jest to spowodowane tym, że dla każdego elementu w liście, algorytm przeszukuje pozostałą część listy w celu znalezienia duplikatów, co zwiększa czas działania proporcjonalnie do liczby elementów w liście.
+
+### Przykład zastosowania
+
+Przykład zastosowania algorytmu usuwania duplikatów z listy dwukierunkowej może być zastosowanie w systemie zarządzania biblioteką.
+
+1. W bibliotece jest lista książek, które są dostępne do wypożyczenia.
+2. W systemie zarządzania biblioteką, kiedy ktoś wprowadza nową książkę do biblioteki, system sprawdza czy książka już jest na liście.
+3. Jeśli książka jest już na liście, system usuwa duplikat.
+4. Dzięki temu algorytmowi system zarządzania biblioteką zawsze ma aktualną i dokładną listę książek dostępnych do wypożyczenia.
+5. W tym przypadku algorytm usuwania duplikatów z listy dwukierunkowej jest skutecznym rozwiązaniem, ponieważ pozwala na utrzymanie aktualnej i dokładnej listy książek dostępnych do wypożyczenia bez konieczności ręcznego sprawdzania i usuwania duplikatów.
