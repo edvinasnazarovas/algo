@@ -21,6 +21,24 @@ End
 End function
 ```
 
+### Złożonośc
+
+1. Pierwszym krokiem jest inicjalizacja stanu początkowego, co jest operacją stałego czasu, O(1).
+
+2. Drugim krokiem jest pętla for, która iteruje od 1 do noOfRandomNums-1. Wewnątrz pętli for, wykonywane są 2 operacje:
+
+* Pierwsza operacja to obliczenie (randomNums[i - 1] * a + c) % m, która jest operacją stałego czasu, O(1).
+* Druga operacja to przypisanie wyniku obliczenia do randomNums[i], która również jest operacją stałego czasu, O(1).
+3. Całkowity czas działania pętli for jest liczbą iteracji pomnożonych przez czas działania operacji wewnątrz pętli: (noOfRandomNums - 1) * (O(1) + O(1)) = (noOfRandomNums - 1) * O(1) = O(n)
+
+Z tego wynika, że ogólna złożoność czasowa funkcji linearCongruentialMethod jest O(1) + O(n) = O(n)
+
+### Przykład zastosowania
+
+Linear Congruent Method (LCG) może być używany do generowania sekwencji liczb pseudolosowych. LCG używa matematycznego wzoru, aby produkować sekwencję liczb, które przypominają właściwości liczb losowych. Te liczby mogą być używane w różnych aplikacjach, takich jak symulacje statystyczne, kryptografia i tworzenie gier.
+
+Na przykład, w tworzeniu gier, LCG może być używane do generowania losowych wydarzeń w grze, takich jak losowe pojawianie się przeciwników czy losowe generowanie poziomów. Może być również używany do generowania losowych liczb do użycia jako klucze szyfrowania w grach sieciowych.
+
 ## Algorytm deszyfrowania z pseudolosowym odstępem.
 
 ### Pseudokod :page_facing_up:
@@ -62,6 +80,26 @@ Początek
 4. Koniec pętli
 Koniec
 ```
+
+### Złożoność
+
+1. Pierwszym krokiem jest generowanie sekwencji liczb pseudolosowych za pomocą metody liniowego kongruencji (LCG), co jest złożonością O(n) dla generowania n liczb pseudolosowych.
+
+2. Drugim krokiem jest pętla for, która iteruje od 0 do długości ciągu tekstu jawnego - 1. Wewnątrz pętli for, wykonywane są następujące operacje:
+
+* Konwersja znaku na wielką literę, co jest operacją stałego czasu O(1).
+* Sprawdzenie czy znak jest w zakresie od 'A' do 'Z', co jest operacją stałego czasu O(1)
+* Odejmowanie modulo 26 liczby pseudolosowej od indeksu znaku, co jest operacją stałego czasu O(1)
+* Przypisanie nowej wartości znaku, co jest operacją stałego czasu O(1)
+3. Całkowity czas działania pętli for jest liczbą iteracji pomnożonych przez czas działania operacji wewnątrz pętli: (n) * (O(1) + O(1) + O(1) + O(1)) = n * O(1) = O(n)
+
+4. Z tego wynika, że ogólna złożoność czasowa algorytmu deszyfrowania z pseudolosowym odstępem jest O(n) + O(n) = O(n), gdzie n jest liczbą znaków w ciągu tekstu jawnego.
+
+### Przykład zastosowania 
+
+Algorytm deszyfrowania z pseudolosowym odstępem może być używany do deszyfrowania tekstu zaszyfrowanego przy użyciu metody szyfrowania z pseudolosowym odstępem. W tym procesie, sekwencja liczb pseudolosowych jest generowana za pomocą metody liniowego kongruencji (LCG) i jest używana do przesunięcia znaków w tekście jawnym.
+
+Na przykład, w systemie komunikacji sieciowej, algorytm deszyfrowania z pseudolosowym odstępem może być używany do odszyfrowywania wiadomości przesłanych przez sieć. Kluczem deszyfrującym jest sekwencja liczb pseudolosowych generowana przez LCG na podstawie klucza prywatnego, który jest używany do szyfrowania wiadomości przed wysłaniem. Dzięki temu, osoby nieupoważnione nie będą mogły odczytać przesłanej wiadomości.
 
 ## Algorytm usuwania duplikatów z listy dwukierunkowej
 
