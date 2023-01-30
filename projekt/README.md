@@ -117,6 +117,12 @@ Na przykład, w systemie komunikacji sieciowej, algorytm deszyfrowania z pseudol
 
 ### Pseudokod :page_facing_up:
 
+[![](https://mermaid.ink/img/pako:eNpNj0EOgkAMRa_SdA0XmIUJ4FI3uqQsGqYK0SlkHIwGuLuNbNj9vLym_8_YDl7Q4T3y2MHpQlrUnbBvIM8Pi8onLVCSlrWaB-WGxyjvBQrDO6valKohrXaWHWOGQWLg3tujmRSAMHUShNBZ9BwfhKSreTyl4frVFl2Kk2Q4jZ6THHu2fgHdjZ8vo-L7NMTz1vw_YP0BMWJDDQ?type=png)](https://mermaid.live/edit#pako:eNpNj0EOgkAMRa_SdA0XmIUJ4FI3uqQsGqYK0SlkHIwGuLuNbNj9vLym_8_YDl7Q4T3y2MHpQlrUnbBvIM8Pi8onLVCSlrWaB-WGxyjvBQrDO6valKohrXaWHWOGQWLg3tujmRSAMHUShNBZ9BwfhKSreTyl4frVFl2Kk2Q4jZ6THHu2fgHdjZ8vo-L7NMTz1vw_YP0BMWJDDQ)
+
+[![](https://mermaid.ink/img/pako:eNpNj0EOgkAMRa_SdA0XmB3gUje6pCwapgrRKWQcDAa4u41s2P28vKb_L9gOXtDhI_LYwflKWtSdsG8gz-dVZU4rlKRlreZBueMxymeFwvDBqnalakirg2XHmGGQGLj39mghBSBMnQQhdBY9xych6WYeT2m4fbVFl-IkGU6j5ySnnq1fQHfn19uo-D4N8bI3_w_YfrGeQ_U?type=png)](https://mermaid.live/edit#pako:eNpNj0EOgkAMRa_SdA0XmB3gUje6pCwapgrRKWQcDAa4u41s2P28vKb_L9gOXtDhI_LYwflKWtSdsG8gz-dVZU4rlKRlreZBueMxymeFwvDBqnalakirg2XHmGGQGLj39mghBSBMnQQhdBY9xych6WYeT2m4fbVFl-IkGU6j5ySnnq1fQHfn19uo-D4N8bI3_w_YfrGeQ_U)
+
+
+
 ```
 usuńDuplikaty(lista)
 Wejście:
