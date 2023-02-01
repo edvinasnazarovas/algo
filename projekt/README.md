@@ -1,4 +1,4 @@
-## Praca wykonal [Edvinas Nazarovas](https://github.com/edvinasnazarovas/)
+## Praca wykonał [Edvinas Nazarovas](https://github.com/edvinasnazarovas/)
 
 ## Projekt do przedmiotu "Algorytmy i struktury danych"
 
@@ -7,7 +7,7 @@
 - [Algorytm generacji liczb pseudolosowych](#algorytm-generacji-liczb-pseudolosowych)
 - [Algorytm deszyfrowania z pseudolosowym odstępem](#algorytm-deszyfrowania-z-pseudolosowym-odstępem)
 - [Algorytm usuwania duplikatów z listy dwukierunkowej](#algorytm-usuwania-duplikatów-z-listy-dwukierunkowej)
-- [Zrodla](#zrodla)
+- [Zródła](#zródła)
 
 ## Algorytm generacji liczb pseudolosowych
 
