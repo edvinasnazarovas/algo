@@ -1,3 +1,14 @@
+## Praca wykonal [Edvinas Nazarovas](https://github.com/edvinasnazarovas/)
+
+## Projekt do przedmiotu "Algorytmy i struktury danych"
+
+## Data 2023-01-20
+
+- [Algorytm generacji liczb pseudolosowych](#algorytm-generacji-liczb-pseudolosowych)
+- [Algorytm deszyfrowania z pseudolosowym odstępem](#algorytm-deszyfrowania-z-pseudolosowym-odstępem)
+- [Algorytm usuwania duplikatów z listy dwukierunkowej](#algorytm-usuwania-duplikatów-z-listy-dwukierunkowej)
+- [Zrodla](#zrodla)
+
 ## Algorytm generacji liczb pseudolosowych
 
 ### Pseudokod :page_facing_up:
@@ -149,3 +160,9 @@ Przykład zastosowania algorytmu usuwania duplikatów z listy dwukierunkowej mo�
 3. Jeśli książka jest już na liście, system usuwa duplikat.
 4. Dzięki temu algorytmowi system zarządzania biblioteką zawsze ma aktualną i dokładną listę książek dostępnych do wypożyczenia.
 5. W tym przypadku algorytm usuwania duplikatów z listy dwukierunkowej jest skutecznym rozwiązaniem, ponieważ pozwala na utrzymanie aktualnej i dokładnej listy książek dostępnych do wypożyczenia bez konieczności ręcznego sprawdzania i usuwania duplikatów.
+
+## Zródła
+
+- [Linear conguential generator](https://en.wikipedia.org/wiki/Linear_congruential_generator)
+- [Szyfrowanie z pseudolosowym odstępem](https://eduinf.waw.pl/inf/alg/001_search/0064.php)
+- [Usuwanie duplikatów z lsity](https://eduinf.waw.pl/inf/alg/001_search/0093.php)
