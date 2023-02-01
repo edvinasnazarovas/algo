@@ -56,7 +56,7 @@ Linear Congruent Method (LCG) może być używany do generowania sekwencji liczb
 Na przykład, w tworzeniu gier, LCG może być używane do generowania losowych wydarzeń w grze, takich jak losowe pojawianie się przeciwników czy losowe generowanie poziomów. Może być również używany do generowania losowych liczb do użycia jako klucze szyfrowania w grach sieciowych.
 
 ## Program
-[LCG.h](
+[lcg.h](/C%20example/lcg.h]
 
 ## Algorytm deszyfrowania z pseudolosowym odstępem.
 
