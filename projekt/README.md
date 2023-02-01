@@ -56,7 +56,7 @@ Linear Congruent Method (LCG) może być używany do generowania sekwencji liczb
 Na przykład, w tworzeniu gier, LCG może być używane do generowania losowych wydarzeń w grze, takich jak losowe pojawianie się przeciwników czy losowe generowanie poziomów. Może być również używany do generowania losowych liczb do użycia jako klucze szyfrowania w grach sieciowych.
 
 ## Program
-[lcg.h](/C%20Example/lcg.h)
+[lcg.h](/C%20example/lcg.h)
 
 ## Algorytm deszyfrowania z pseudolosowym odstępem.
 
@@ -127,6 +127,9 @@ Algorytm deszyfrowania z pseudolosowym odstępem może być używany do deszyfro
 
 Na przykład, w systemie komunikacji sieciowej, algorytm deszyfrowania z pseudolosowym odstępem może być używany do odszyfrowywania wiadomości przesłanych przez sieć. Kluczem deszyfrującym jest sekwencja liczb pseudolosowych generowana przez LCG na podstawie klucza prywatnego, który jest używany do szyfrowania wiadomości przed wysłaniem. Dzięki temu, osoby nieupoważnione nie będą mogły odczytać przesłanej wiadomości.
 
+## Program
+[cipher.h](/C%20example/cipher.h)
+
 ## Algorytm usuwania duplikatów z listy dwukierunkowej
 
 ### Pseudokod :page_facing_up:
@@ -163,6 +166,9 @@ Przykład zastosowania algorytmu usuwania duplikatów z listy dwukierunkowej mo�
 3. Jeśli książka jest już na liście, system usuwa duplikat.
 4. Dzięki temu algorytmowi system zarządzania biblioteką zawsze ma aktualną i dokładną listę książek dostępnych do wypożyczenia.
 5. W tym przypadku algorytm usuwania duplikatów z listy dwukierunkowej jest skutecznym rozwiązaniem, ponieważ pozwala na utrzymanie aktualnej i dokładnej listy książek dostępnych do wypożyczenia bez konieczności ręcznego sprawdzania i usuwania duplikatów.
+
+## Program
+[doublyLinkedList.h](/C%20example/doublyLinkedList.h)
 
 ## Zródła
 
