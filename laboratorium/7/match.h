@@ -17,7 +17,7 @@
 #define MAX_CHARS 256
 #define q 11
 
-void naive_search(char *text, char *pattern) {
+void naiveSearch(char *text, char *pattern) {
     int n = (int)strlen(text);
     int m = (int)strlen(pattern);
     int i, j;
@@ -31,7 +31,7 @@ void naive_search(char *text, char *pattern) {
     }
 }
 
-void rabin_karp(char *text, char *pattern) {
+void searchRabinKarp(char *text, char *pattern) {
     int i, j;
     int n = (int)strlen(text);
     int m = (int)strlen(pattern);
@@ -87,9 +87,9 @@ void boyerMoore(char *txt, char *pat) {
             j--;
         if (j < 0) {
             printf("\n pattern occurs at shift = %d", s);
-            s += (s + m < n) ? m - badchar[txt[s + m]] : 1;
+            s += (s + m < n) ? m - badchar[(int)txt[s + m]] : 1;
         } else
-            s += fmax(1, j - badchar[txt[s + j]]);
+            s += (int)fmax(1, j - badchar[(int)txt[s + j]]);
     }
 }
 
@@ -260,15 +260,15 @@ bool isAnagram(char *word1, char *word2) {
     return false;
   }
 
-  int letters1[256] = {0};
+  int letters1[MAX_CHARS] = {0};
   int i;
   for (i = 0; i < len1; i++) {
-    letters1[word1[i]]++;
+    letters1[(int)word1[i]]++;
   }
 
   int letters2[256] = {0};
   for (i = 0; i < len2; i++) {
-    letters2[word2[i]]++;
+    letters2[(int)word2[i]]++;
   }
 
   for (i = 0; i < 256; i++) {
