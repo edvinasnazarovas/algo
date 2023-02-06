@@ -18,8 +18,8 @@
 #define q 11
 
 void naive_search(char *text, char *pattern) {
-    int n = strlen(text);
-    int m = strlen(pattern);
+    int n = (int)strlen(text);
+    int m = (int)strlen(pattern);
     int i, j;
     for (i = 0; i <= n - m; i++) {
         for (j = 0; j < m; j++) {
@@ -33,8 +33,8 @@ void naive_search(char *text, char *pattern) {
 
 void rabin_karp(char *text, char *pattern) {
     int i, j;
-    int n = strlen(text);
-    int m = strlen(pattern);
+    int n = (int)strlen(text);
+    int m = (int)strlen(pattern);
     int p = 0;
     int t = 0;
     int h = 1;
@@ -74,8 +74,8 @@ void badCharHeuristic(char *str, int size, int badchar[MAX_CHARS]) {
 }
 
 void boyerMoore(char *txt, char *pat) {
-    int m = strlen(pat);
-    int n = strlen(txt);
+    int m = (int)strlen(pat);
+    int n = (int)strlen(txt);
     int badchar[MAX_CHARS];
 
     badCharHeuristic(pat, m, badchar);
@@ -115,8 +115,8 @@ void computeLPSArray(char *pat, int M, int *lps) {
 }
 
 void KMPSearch(char *pat, char *txt) {
-    int M = strlen(pat);
-    int N = strlen(txt);
+    int M = (int)strlen(pat);
+    int N = (int)strlen(txt);
 
     int lps[M];
 
@@ -194,8 +194,8 @@ int countNumbers(char *text) {
 
 // Znaleźć te same litery w dwoch wzorach.
 void findCommonLetters(char *pattern1, char *pattern2) {
-  int len1 = strlen(pattern1);
-  int len2 = strlen(pattern2);
+  int len1 = (int)strlen(pattern1);
+  int len2 = (int)strlen(pattern2);
   bool hashset[MAX_LETTERS] = {false};
   bool printed[MAX_LETTERS] = {false};
   int i;
@@ -218,7 +218,7 @@ void findCommonLetters(char *pattern1, char *pattern2) {
 
 // Wyprowadzić wszystkie nie powtarzające się słowa.
 void extractNonRepeatingWords(char *text) {
-  int len = strlen(text);
+  int len = (int)strlen(text);
   char words[MAX_WORDS][50];
   int wordCount = 0;
   int i, j;
@@ -253,8 +253,8 @@ void extractNonRepeatingWords(char *text) {
 
 // Sprawdzic czy słowo jest anagram.
 bool isAnagram(char *word1, char *word2) {
-  int len1 = strlen(word1);
-  int len2 = strlen(word2);
+  int len1 = (int)strlen(word1);
+  int len2 = (int)strlen(word2);
 
   if (len1 != len2) {
     return false;
