@@ -36,10 +36,10 @@ int main() {
   KMPSearch(pat, txt);
   printf("\n");
   
-  rabin_karp(txt, pat);
+  searchRabinKarp(txt, pat);
   printf("\n");
   
-  naive_search(txt, pat);
+  naiveSearch(txt, pat);
   
   return 0;
 }
