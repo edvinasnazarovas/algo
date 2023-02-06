@@ -198,4 +198,4 @@ Przykład zastosowania algorytmu usuwania duplikatów z listy dwukierunkowej mo�
 
 - [Linear conguential generator](https://en.wikipedia.org/wiki/Linear_congruential_generator)
 - [Szyfrowanie z pseudolosowym odstępem](https://eduinf.waw.pl/inf/alg/001_search/0064.php)
-- [Usuwanie duplikatów z lsity](https://eduinf.waw.pl/inf/alg/001_search/0093.php)
+- [Usuwanie duplikatów z listy](https://eduinf.waw.pl/inf/alg/001_search/0093.php)
