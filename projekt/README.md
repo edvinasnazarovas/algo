@@ -132,30 +132,8 @@ Na przykład, w systemie komunikacji sieciowej, algorytm deszyfrowania z pseudol
 
 ## Algorytm usuwania duplikatów z listy dwukierunkowej
 
-### Pseudokod :page_facing_up:
-
-```
-usuńDuplikaty(lista)
-Wejście:
-lista - wskaźnik na obiekt typu DoubleLinkedList
-Wyjście: None
-Początek
-1. Sprawdź czy lista jest pusta lub NULL, jeśli tak zwróć
-2. Ustaw aktualny element na głowę listy
-3. Dopóki aktualny element jest różny od NULL
-3.1 Ustaw następny na aktualny->następny
-3.2 Ustaw duplikat na aktualny->następny
-3.3 Dopóki duplikat jest różny od NULL
-3.3.1 Jeśli duplikat->dane jest równe aktualny->dane
-3.3.1.1 Ustaw duplicateNext na duplikat->następny
-3.3.1.2 Wywołaj funkcję usuńNode(lista, duplikat) by usunąć duplikat
-3.3.1.3 Ustaw duplikat na duplicateNext
-3.3.2 W przeciwnym razie
-3.3.2.1 Ustaw duplikat na duplikat->następny
-3.4 Ustaw aktualny na następny
-4. Koniec pętli
-Koniec
-```
+### Schemat blokowy
+[![](https://mermaid.ink/img/pako:eNp1UkFS6zAMvYrH67aTtEOTZgEzLaxguoFswF1oEkFDEiWT2kBocxDOwRH4B_uqQ9NQ_t945Ge99yRZWxkVMcpAPlVQrsXdpaJbDZUWw-G5IJNlizVG6XbxXos1QiyecaMtftHYlN0ywZ24egg3Gl4TyGsBqTaQUS0wwxxJi2dIC0teKeoUW_IdpDtRoTYVKbqy2Nx6_RbZ-y7Dm5uLRtG8x148XBeUYLTqYFsRwUZjSXWvsD3054MxjjqD4XkHryw9NmWWpKB7xAP0P56iLqNTiEDjkpu13XTPvel9kw55vdJfIDN4HPvRMQbCVqL6-nzl-KDbPu01j9zeiB4LQ_FpP9YY32xTR51-U6datrhQkZVrO-XfYRVeIHsNW48f8_rhxaLh7xH9cxK2cGLOt2a3EKx58mNzOZA5VjkkMe_xVpEQSuo1742SAYcxVKmSihrOA6OL25oiGejK4ECaMmbbywR4_XMZPEK2YbQEui-K_JDEVxls5ZsMXM8f-TPP8Seue-ZNp7PxQNYyGJ6NJo7jTFxv4niu44_9ZiDfrYI7cn3H97wxH87Mc6d-8xfDOjYO?type=png)](https://mermaid.live/edit#pako:eNp1UkFS6zAMvYrH67aTtEOTZgEzLaxguoFswF1oEkFDEiWT2kBocxDOwRH4B_uqQ9NQ_t945Ge99yRZWxkVMcpAPlVQrsXdpaJbDZUWw-G5IJNlizVG6XbxXos1QiyecaMtftHYlN0ywZ24egg3Gl4TyGsBqTaQUS0wwxxJi2dIC0teKeoUW_IdpDtRoTYVKbqy2Nx6_RbZ-y7Dm5uLRtG8x148XBeUYLTqYFsRwUZjSXWvsD3054MxjjqD4XkHryw9NmWWpKB7xAP0P56iLqNTiEDjkpu13XTPvel9kw55vdJfIDN4HPvRMQbCVqL6-nzl-KDbPu01j9zeiB4LQ_FpP9YY32xTR51-U6datrhQkZVrO-XfYRVeIHsNW48f8_rhxaLh7xH9cxK2cGLOt2a3EKx58mNzOZA5VjkkMe_xVpEQSuo1742SAYcxVKmSihrOA6OL25oiGejK4ECaMmbbywR4_XMZPEK2YbQEui-K_JDEVxls5ZsMXM8f-TPP8Seue-ZNp7PxQNYyGJ6NJo7jTFxv4niu44_9ZiDfrYI7cn3H97wxH87Mc6d-8xfDOjYO)
 
 ### Przykład zastosowania
 
