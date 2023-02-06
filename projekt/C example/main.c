@@ -18,18 +18,30 @@ int main() {
 
   linearCongruentialMethod(Xo, m, a, c, randomNums, noOfRandomNums);
 
+  printf("                    LCG\n-------------------------------------------\n");
+  
   // Wydrukowanie pseudolosowych liczb
+  printf("Generujemy pseudolosowe liczby za pomocą LCG: \n");
   for (int i = 0; i < noOfRandomNums; i++) {
     printf("%d \n", randomNums[i]);
   }
 
+  printf("-------------------------------------------\n");
+
+  printf("\n\n\n                 Szyfrowanie\n-------------------------------------------\n");
+  printf("Słowo - '%s'\n\n", s);
+  
+  printf("Szyfrowanie tekstu:\n");
   cipher(Xo, m, a, c, s);
 
   printf("%s\n", s);
 
+  printf("\nDeszyfrowanie tekstu:\n");
   decipher(Xo, m, a, c, s);
 
   printf("%s\n", s);
+
+  printf("-------------------------------------------\n");
 
   DoubleLinkedList *list = createDoubleLinkedList();
   insertNode(list, 5);
@@ -41,13 +53,17 @@ int main() {
   insertNode(list, 3);
   insertNode(list, 6);
 
-  printf("%p\n", searchNode(list, 5));
+  printf("\n\n\n       Usunięcie duplikatów w liście\n-------------------------------------------\n");
 
+  printf("Lista: \n");
   printDoubleLinkedList(list);
 
   removeDuplicates(list);
 
+  printf("\nLista po usunięciu duplikatów:\n");
   printDoubleLinkedList(list);
+
+  printf("-------------------------------------------\n");
 
   return 0;
 }
